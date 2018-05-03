@@ -1,0 +1,68 @@
+$gray : #f1f1f1
+$red : #a50006
+$red_hover_menu : #5f120f
+$largura_content : 80.52%
+
+section.topo
+    background: $gray
+    div        
+        width: $largura_content
+        margin: auto
+        display: flex
+        justify-content: space-between    
+        font-weight: 400
+        font-size: 0.7em
+        align-items: center
+        ul
+            margin: 0
+        li
+            display: inline
+            a
+                text-decoration: none
+                color: #000000 
+                padding: 5px 15px
+                border-left: solid thin #000000
+                &:hover
+                    text-decoration: underline  
+                div
+                    display: none
+            img
+                width: 18px
+                margin-right: 5px   
+                            
+        p
+            margin: 5px 0
+            cursor: default
+
+section.banner
+    width: $largura_content
+    margin: 10px auto
+    display: flex
+    justify-content: space-between 
+    align-items: center 
+    img.logo
+        width: 13.18%
+    div
+        width: 54.54%
+    img.banner_2
+        width: 27.27%
+
+nav.menu
+    background: $red
+    div
+        width: $largura_content
+        margin: auto
+        display: flex
+        justify-content: space-around
+        a 
+            flex-grow: 1   
+            font-size: 0.9em        
+            padding: 10px
+            text-decoration: none
+            color: #ffffff
+            transition-duration: 0.3s
+            text-align: center
+            &:hover
+                background: $red_hover_menu
+
+    

@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { BannerSlideComponent } from './banner-slide/banner-slide.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BannerSlideComponent
   ],
   imports: [
     BrowserModule,
