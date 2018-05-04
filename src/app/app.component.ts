@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var $ :any;
 
 @Component({
   selector: 'app-root',
@@ -6,17 +7,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent implements  OnInit{
-  private imagens_slide:object;
+  public slide_600x100:object;
+  public slide_300x100:object;
 
   constructor(){
+    this.slide_600x100 = [
+        { 'imagem' : './assets/imagens/banner/600x100.jpg' },
+        { 'imagem' : './assets/imagens/banner/600x100.jpg' },
+        { 'imagem' : './assets/imagens/banner/600x100.jpg' }
+    ]
 
+    this.slide_300x100 = [
+        { 'imagem' : './assets/imagens/banner/300x100.jpg' },
+        { 'imagem' : './assets/imagens/banner/300x100.jpg' },
+        { 'imagem' : './assets/imagens/banner/300x100.jpg' }
+    ]
   }
 
   ngOnInit(){
-    this.imagens_slide = {
-      'imagem1' : './assets/imagens/banner/600x100.jpg',
-      'imagem2' : './assets/imagens/banner/600x100.jpg',
-      'imagem3' : './assets/imagens/banner/600x100.jpg'
-    }
+    $('nav.menu a').hover(function(){
+      $(this).children('div').slideToggle();
+    })
+
+    $('section.topo a').hover(function(){
+      $(this).children('div').slideToggle();
+    })
+    
   }
 }

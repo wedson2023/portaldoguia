@@ -11,26 +11,38 @@ section.topo
         display: flex
         justify-content: space-between    
         font-weight: 400
-        font-size: 0.7em
         align-items: center
         ul
             margin: 0
         li
             display: inline
-            a
+            a                
+                font-size: 0.7em
                 text-decoration: none
                 color: #000000 
                 padding: 5px 15px
                 border-left: solid thin #000000
                 &:hover
-                    text-decoration: underline  
+                    text-decoration: underline 
                 div
+                    z-index: 1
+                    position: absolute
+                    background: $gray
+                    display: block
+                    width: 170px
                     display: none
+                    a
+                        display: flex
+                        flex-direction: column
+                        border-left: solid thin $gray
+                        font-size: 1em !important
+                        
             img
                 width: 18px
                 margin-right: 5px   
                             
         p
+            font-size: 0.7em
             margin: 5px 0
             cursor: default
 
@@ -42,9 +54,9 @@ section.banner
     align-items: center 
     img.logo
         width: 13.18%
-    div
+    div.slide_600x100
         width: 54.54%
-    img.banner_2
+    div.slide_300x100
         width: 27.27%
 
 nav.menu
@@ -64,5 +76,17 @@ nav.menu
             text-align: center
             &:hover
                 background: $red_hover_menu
+            div
+                z-index: 1
+                position: absolute
+                width: 160px
+                margin-top: 10px
+                display: none
+                background: $red
+                margin-left: -0.7%                
+                a
+                    display: flex
+                    flex-direction: column
+                    text-align: left !important
 
     

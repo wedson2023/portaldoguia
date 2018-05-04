@@ -10,10 +10,11 @@ export class BannerSlideComponent implements OnInit {
   @Input() imagens:object;
 
   constructor() {
-    console.log(this.imagens);
+    
    }
 
   ngOnInit() {
+    console.log(this.imagens);
   }
 
 }
