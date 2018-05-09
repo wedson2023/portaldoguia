@@ -1,0 +1,155 @@
+@import '../../assets/sass/reset'
+section.noticias-agenda
+    width: $largura_content
+    margin: 10px auto
+    display: flex
+    justify-content: space-between
+    div.noticias
+        border: solid thin $gray
+        width: 33%
+        height: 350px
+        header
+            padding: 10px
+            border-bottom: dashed thin #f1f1f1
+            h3
+                font-size: 1em
+                color: #666666
+        li
+            display: flex
+            justify-content: space-between
+            padding: 10px
+            border-bottom: dashed thin #f1f1f1
+            a
+                color: $red !important
+                font-size: 1em
+                line-height: 22px
+            strong
+                font-size: 0.7em
+                color: #666666
+                display: block
+                width: 80px
+        div
+            display: flex
+            justify-content: flex-end
+            padding: 10px
+            a
+                color: $red !important
+                font-size: 1em
+    div.agenda
+        width: 33%
+        height: 350px
+        header
+            background: #a5cd37
+            color: #ffffff
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 10px
+        section
+            display: flex
+            justify-content: flex-start
+            margin-top: 9.3px
+            align-items: center
+            padding-bottom: 10px
+            border-bottom: dashed thin #cccccc
+            div.data
+                background: #a5cd37
+                color: #ffffff
+                text-align: center
+                margin: 0 10px 15px 0
+                strong
+                    display: block
+                    padding: 5px 15px
+                    margin: 3px
+                    background: #ffffff
+                    color: #000000
+            div.informacao
+                display: flex
+                flex-direction: column
+                line-height: 20px
+                h3
+                    color: #f4801e
+                    font-size: 1.1em
+                strong
+                    font-size: 1em  
+                span
+                    font-size: 0.7em
+                    color: #666666
+                div.link
+                    display: flex
+                    justify-content: space-between                    
+                    a
+                        color: #666666
+                        font-size: 0.7em         
+    div.slide_300x350
+        width: 350px
+        height: 350px        
+
+footer
+    background: $azul
+    section
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: $largura_content
+        margin: auto
+        padding: 15px 0
+        img
+          width: 20%  
+        div.link
+            display: flex
+            justify-content: space-between
+            width: 40%
+            h3
+                color: $yellow
+                font-size: 0.8em
+                margin-left: -15px
+            li:not(:first-child)
+                line-height: 20px
+                list-style-image: url('../../assets/imagens/symbol-list.png') !important
+                color: #ffffff
+                a
+                    color: $gray
+                    font-size: 0.7em
+        div.cadastrar-empresa
+            background: $gray
+            padding: 20px
+            text-align: right
+            p
+                font-style: italic
+                font-size: 0.8em
+                font-weight: bold                
+            h2
+                color: $azul
+                font-size: 1em
+                font-weight: bold
+            button
+                margin-top: 20px
+                width: 100%
+                padding: 5px
+                border-radius: 0.3em
+                border: none
+                outline: none
+                font-size: 0.8em
+                color: #ffffff
+                background: #a5cd37
+                cursor: pointer
+                &:hover
+                    background: #688c03
+div.desenvolvedor
+    background: $red
+    padding: 17px 10px
+    color: #ffffff
+    width: 30%
+    text-align: center
+    float: right
+    margin-top: -7px
+    h3
+        font-size: 0.9em
+        cursor: pointer
+div.direitos
+    background: $yellow
+    padding: 10px
+    width: 70%
+    float: left
+    text-align: right

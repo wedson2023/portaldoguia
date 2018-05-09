@@ -1,0 +1,139 @@
+@import '../../assets/sass/reset'
+section.topo
+    background: $gray
+    div        
+        width: $largura_content
+        margin: auto
+        display: flex
+        justify-content: space-between    
+        font-weight: 400
+        align-items: center
+        ul
+            margin: 0
+        li
+            display: inline
+            a                
+                font-size: 0.7em
+                text-decoration: none
+                color: #000000 
+                padding: 5px 15px
+                border-left: solid thin #000000
+                &:hover
+                    text-decoration: underline 
+                div
+                    z-index: 1
+                    position: absolute
+                    background: $gray
+                    display: block
+                    width: 170px
+                    display: none
+                    a
+                        display: flex
+                        flex-direction: column
+                        border-left: solid thin $gray
+                        font-size: 1em !important
+                        
+            img
+                width: 18px
+                margin-right: 5px   
+                            
+        p
+            font-size: 0.7em
+            margin: 5px 0
+            cursor: default
+section.banner
+    width: $largura_content
+    margin: 10px auto
+    display: flex
+    justify-content: space-between 
+    align-items: center 
+    img.logo
+        width: 13.18%
+    div.slide_600x100
+        width: 54.54%
+    div.slide_300x100
+        width: 27.27%
+
+nav.menu
+    background: $red
+    div
+        width: $largura_content
+        margin: auto
+        display: flex
+        justify-content: space-around
+        a 
+            flex-grow: 1   
+            font-size: 0.9em        
+            padding: 10px
+            text-decoration: none
+            color: #ffffff
+            transition-duration: 0.3s
+            text-align: center
+            &:hover
+                background: $red_hover_menu
+            div
+                z-index: 1
+                position: absolute
+                width: 160px
+                margin-top: 10px
+                display: none
+                background: $red
+                margin-left: -0.7%                
+                a
+                    display: flex
+                    flex-direction: column
+                    text-align: left !important
+
+section.buscar
+    background: $azul    
+    padding: 0 15%
+    margin: 10px 0
+    div
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 20px 0
+        p
+            color: #ffffff
+            font-size: 0.8em
+            text-align: right
+            margin: 0
+            line-height: 20px
+        label
+            display: flex
+            justify-content: space-between
+            align-items: center
+        label.form-servico            
+            width: 60%
+            margin-right: 50px
+            display: flex
+            justify-content: flex-end
+            input
+                width: 48%
+                outline: none
+                border: none
+                padding: 7px
+                font-size: 0.9em
+                margin-left: 10px
+                border-radius: 0.3em 
+        label.form-cidade
+            width: 40%
+            input
+                width: 80%
+                margin-right: 15px
+                outline: none
+                border: none
+                padding: 7px
+                font-size: 0.9em
+                border-radius: 0.3em
+            button
+                background: $yellow
+                font-weight: bold
+                border: none
+                padding: 7px
+                border-radius: 0.3em
+                cursor: pointer
+                font-size: 0.9em
+                transition-duration: 0.3s
+                &:hover
+                    background: #ffd900
