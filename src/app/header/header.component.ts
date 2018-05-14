@@ -32,8 +32,7 @@ export class HeaderComponent implements OnInit {
 
     $('section.topo a').hover(function(){
       $(this).children('div').slideToggle();
-    })
-    
+    })    
   }
 
 }

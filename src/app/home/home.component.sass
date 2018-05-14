@@ -4,7 +4,6 @@ section.home
     margin: 30px auto
     display: flex
     justify-content: space-between
-    height: 1200px
     div.conteudo
         width: 69.3%
         section.bloco-1
@@ -140,10 +139,59 @@ section.home
                     font-weight: bold
                     color: $green
                     line-height: 15px
-                    
 
+        section.bloco-5            
+            background: $gray            
+            header     
+                display: flex
+                justify-content: flex-start
+                border-bottom: solid thin $red
+                padding: 10px 10px 0 0                
+                p
+                    border-bottom: solid 3px $red
+                    font-weight: bold
+                    color: #666666
+                    padding: 0 10px
+                span
+                    margin-left: 15px
+                    font-weight: 500
+                    color: #666666
+            section
+                display: flex
+                justify-content: space-between
+                padding: 15px
+            a.banner
+                width: 23%
+            img
+                width: 100%
+                height: 200px
+            article
+                width: 23%
+                height: 200px 
+                display: flex
+                flex-direction: column
+                overflow: hidden
+                overflow-x: hidden
+                overflow-y: auto
+                nav
+                    display: none
+                    div
+                        display: flex
+                        flex-direction: column                        
+                        a
+                            font-size: 1em
+                            padding: 5px 5px 5px 0
+                        &:hover
+                            text-decoration: none
+                            
+                a
+                    padding: 5px 5px 5px 15px
+                    color: #666666
+                    background: #cccccc                    
+                    font-size: 0.8em
+                a:not(:last-child)
+                    border-bottom: solid thin #666666
 
-                    
                     
 
     aside
