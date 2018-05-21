@@ -18,25 +18,26 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    $('section.bloco-5 article').hover(function(){
-      $(this).children('div').slideToggle();
-    })
-
-    $('article.scroll a').hover(function(){
-      $(this).children('nav').slideToggle();
-    })
-
-    $('.slide-slick').slick({
-        slidesToShow: 2,
-        slidesToScroll: 2
+    $('.slide-slick-3').slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: false
       });
 
     $('.prev').on('click', function(){
-      $('.slide-slick').slick("slickPrev");
+      $('.slide-slick-3').slick("slickPrev");
     });
 
     $('.next').on('click', function(){
-      $('.slide-slick').slick("slickNext");
+      $('.slide-slick-3').slick("slickNext");
+    });
+
+    $('.slide-slick-6').slick({
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 5000
     });
   }
 
