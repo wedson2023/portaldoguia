@@ -39,6 +39,35 @@ export class HomeComponent implements OnInit {
       autoplay: true,
       autoplaySpeed: 5000
     });
+
+    $('.prev-turisticos').on('click', function(){
+      $('.slide-turisticos').slick("slickPrev");
+    });
+
+    $('.next-turisticos').on('click', function(){
+      $('.slide-turisticos').slick("slickNext");
+    });
+
+    $('.slide-turisticos').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false
+    });
+
+    $('.prev-cursos').on('click', function(){
+      $('.slide-cursos').slick("slickPrev");
+    });
+
+    $('.next-cursos').on('click', function(){
+      $('.slide-cursos').slick("slickNext");
+    });
+
+    $('.slide-cursos').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false
+    });
+
   }
 
 }

@@ -1,3 +1,17 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
+<div class="conteudo">
+    <div class="conteiner">
+        <router-outlet></router-outlet>
+    </div>
+  <aside>
+    <div class="slide_300x350"><app-banner-slide [imagens]="slide_300x350"></app-banner-slide></div>
+    <img class="banner" src="./assets/imagens/banner/300x250.jpg" alt="">
+    <img class="banner" src="./assets/imagens/banner/300x350.jpg" alt="">
+    <img class="banner" src="./assets/imagens/banner/300x250.jpg" alt="">
+    <img class="banner" src="./assets/imagens/banner/300x350.jpg" alt="">
+    <img class="banner" src="./assets/imagens/banner/300x250.jpg" alt="">
+    <img class="banner" src="./assets/imagens/banner/300x250.jpg" alt="">
+  </aside>  
+</div>
+
 <app-footer></app-footer>
