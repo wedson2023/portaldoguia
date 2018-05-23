@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentInit } from '@angular/core';
+import { NgProgressService } from 'ng2-progressbar';
+
 declare var $ :any;
 
 @Component({
@@ -6,15 +8,16 @@ declare var $ :any;
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.sass']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterContentInit {
   public slide_300x350:object;
   
-  constructor() {
+  constructor(private progresso: NgProgressService) {
     this.slide_300x350 = [
       { 'imagem' : './assets/imagens/banner/300x350.jpg' },
       { 'imagem' : './assets/imagens/banner/300x350.jpg' },
       { 'imagem' : './assets/imagens/banner/300x350.jpg' }
     ]
+    this.progresso.start();
   }
 
   ngOnInit() {
@@ -68,6 +71,10 @@ export class HomeComponent implements OnInit {
       arrows: false
     });
 
+  }
+
+  ngAfterContentInit(){
+    this.progresso.done();
   }
 
 }
