@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { NoticiasComponent } from './noticias/noticias.component';
+import { AgendaDeEventosComponent } from './agenda-de-eventos/agenda-de-eventos.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { NoticiasComponent } from './noticias/noticias.component';
     FooterComponent,
     HomeComponent,
     QuemSomosComponent,
-    NoticiasComponent
+    NoticiasComponent,
+    AgendaDeEventosComponent
   ],
   imports: [
     BrowserModule,

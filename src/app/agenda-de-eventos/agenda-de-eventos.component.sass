@@ -1,0 +1,86 @@
+@import '../../assets/sass/reset'
+
+div.agenda
+    width: 100%
+    display: flex
+    justify-content: space-between  
+    article.agenda
+        width: 60%            
+    p
+        color: #666666
+        font-size: 0.9em
+        margin: 15px 0
+    nav
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: 10px
+        a
+            color: #666666
+            font-size: 0.8em
+        ul
+            width: 150px
+            display: flex
+            justify-content: space-between
+            margin: 0 10px
+            li
+                display: inline-block
+    section
+        display: flex
+        justify-content: flex-start
+        margin-top: 9.3px
+        align-items: center
+        padding: 9.5px
+        border-bottom: dashed thin #cccccc
+        div.data
+            background: #a5cd37
+            color: #ffffff
+            text-align: center
+            margin: 0 10px 15px 0
+            strong
+                display: block
+                padding: 5px 15px
+                margin: 3px
+                background: #ffffff
+                color: #000000
+        div.informacao
+            display: flex
+            flex-direction: column
+            line-height: 20px
+            h3
+                color: $laranja
+                font-size: 1.1em
+            strong
+                font-size: 1em  
+            span
+                font-size: 0.7em
+                color: #666666
+            div.link
+                display: flex
+                justify-content: space-between                    
+                a
+                    color: #666666
+                    font-size: 0.6em 
+    article.categorias 
+        width: 30%
+        div
+            display: flex
+            flex-direction: column
+            border: solid thin $gray
+            header
+                color: #a5cd37
+                padding: 10px 5px
+                border-bottom: solid 5px #a5cd37
+                h3
+                    font-size: 1.2em
+            a
+                color: #999999
+                text-decoration: none
+                padding: 7px 5px
+                border-bottom: solid thin $gray
+                &:hover
+                    text-decoration: underline
+        img
+            width: 100%
+            margin-top: 15px
+

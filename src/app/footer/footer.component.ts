@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare var $ :any;
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -18,6 +18,9 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit() {
+    $('a.agenda').click(function(){
+      window.scrollTo(0, 0)
+    })
   }
 
 }
