@@ -2,11 +2,11 @@ import { Component, OnInit, AfterContentInit } from '@angular/core';
 import { NgProgressService } from 'ng2-progressbar';
 
 @Component({
-  selector: 'app-agenda-de-eventos',
-  templateUrl: './agenda-de-eventos.component.html',
-  styleUrls: ['./agenda-de-eventos.component.sass']
+  selector: 'app-guia-comercial',
+  templateUrl: './guia-comercial.component.html',
+  styleUrls: ['./guia-comercial.component.sass']
 })
-export class AgendaDeEventosComponent implements OnInit, AfterContentInit {
+export class GuiaComercialComponent implements OnInit, AfterContentInit {
 
   constructor(private progresso: NgProgressService) {
     this.progresso.start();
@@ -19,4 +19,5 @@ export class AgendaDeEventosComponent implements OnInit, AfterContentInit {
   ngAfterContentInit(){
     this.progresso.done();
   }
+
 }

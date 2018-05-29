@@ -18,8 +18,8 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit() {
-    $('a.agenda').click(function(){
-      window.scrollTo(0, 0)
+    $('a.agenda').on('click', function(){
+      window.scrollTo(0,0);
     })
   }
 
