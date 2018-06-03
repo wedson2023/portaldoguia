@@ -13,6 +13,7 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { AgendaDeEventosComponent } from './agenda-de-eventos/agenda-de-eventos.component';
 import { GuiaComercialComponent } from './guia-comercial/guia-comercial.component';
+import { ContatoComponent } from './contato/contato.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { GuiaComercialComponent } from './guia-comercial/guia-comercial.componen
     QuemSomosComponent,
     NoticiasComponent,
     AgendaDeEventosComponent,
-    GuiaComercialComponent
+    GuiaComercialComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,
