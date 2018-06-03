@@ -1,0 +1,55 @@
+@import '../../assets/sass/reset'
+div.conteiner
+    display: flex
+    justify-content: space-between
+    section.formulario
+        width: 70%
+        div.cadastre
+            background: $gray
+            padding-top: 10px
+            text-align: center
+            h3
+                color: $green
+                margin: 25px 0
+                font-size: 1.3em
+            p
+                font-size: 0.9em
+                color: #666666
+            h4
+                color: #ffffff
+                text-align: center
+                background: #666666
+                padding: 7px
+                font-weight: 100
+                font-size: 1.2em
+        div.contato
+            background: $gray
+            text-align: center
+            p
+                padding: 25px
+                color: #666666
+            p:first-child
+                border-bottom: $red 3px solid 
+            a
+                color: $red
+    section.segmentos
+        width: 27%
+        div
+            display: flex
+            flex-direction: column
+            background: $gray
+            border: solid thin $gray            
+            header
+                background: $red
+                padding: 10px
+                color: #ffffff
+                text-align: center
+                h3
+                    font-size: 1.2em
+            a
+                color: #666666
+                text-decoration: none
+                padding: 7px 5px
+                border-bottom: solid thin #cccccc
+                &:hover
+                    text-decoration: underline

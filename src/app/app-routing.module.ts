@@ -1,3 +1,4 @@
+import { AnuncieComponent } from './anuncie/anuncie.component';
 import { ContatoComponent } from './contato/contato.component';
 import { GuiaComercialComponent } from './guia-comercial/guia-comercial.component';
 import { AgendaDeEventosComponent } from './agenda-de-eventos/agenda-de-eventos.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path : 'noticias', component : NoticiasComponent },
   { path : 'agenda-de-eventos', component : AgendaDeEventosComponent },
   { path : 'guia-comercial', component : GuiaComercialComponent },
+  { path : 'anuncie', component : AnuncieComponent },
   { path : 'contato', component : ContatoComponent },
 ];
 
