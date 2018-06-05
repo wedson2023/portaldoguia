@@ -4,6 +4,42 @@ div.conteiner
     justify-content: space-between
     section.formulario
         width: 70%
+        form    
+            margin: 15px 0        
+            input[type=text]
+                width: 100%
+                border: solid thin #cccccc
+                padding: 5px
+                outline: none
+            select
+                @extend input[type=text]
+                padding: 7px
+            label
+                display: flex
+                flex-direction: column
+                color: #666666
+                font-size: 0.9em
+                margin-bottom: 15px
+            div
+                display: flex
+                justify-content: space-between
+                label
+                    width: 49%
+            span.termos
+                font-size: 0.8em
+                display: flex
+                align-items: center
+                input
+                    margin-right: 10px
+            input[type=submit]
+                background: $laranja
+                padding: 7px
+                color: #ffffff
+                border: none
+                width: 20%
+                cursor: pointer
+                &:hover
+                    background: orange
         div.cadastre
             background: $gray
             padding-top: 10px
