@@ -1,0 +1,92 @@
+@import '../../../assets/sass/reset'
+
+section
+    background: $gray
+    padding: 10px
+    div
+        display: flex
+        justify-content: space-between
+        article
+            width: 39%
+            text-align: center
+            h3
+                color: $laranja
+                font-size: 1.2em
+                margin-bottom: 10px
+                display: block
+                text-align: center
+            img
+                width: 100%
+                height: 230px
+        ul
+            width: 30%
+            padding: 0 10px
+            li
+                line-height: 15px
+                margin-bottom: 7px
+            h3
+                color: $laranja
+                font-size: 0.9em
+                margin-bottom: 10px
+            strong
+                display: block
+                font-size: 0.7em
+                color: #666666
+            span
+                font-size: 0.7em
+                color: #666666
+                line-height: 15px
+            a
+                font-size: 0.7em
+                color: $azul
+        form
+            width: 30%
+            background: #ffffff
+            padding: 5px
+            strong
+                font-size: 0.7em
+                text-align: center
+                display: block
+            h3
+                padding: 7px 5px
+                text-align: center
+                color: $laranja
+                background: $gray
+                font-size: 0.9em
+                margin: 5px 0
+            input
+                width: 100%
+                padding: 5px
+                font-size: 0.8em
+                outline: none
+                margin-bottom: 5px  
+            input.campos
+                border: #f1f1f1 solid thin         
+            input[type=submit]
+                background: $laranja
+                color: #ffffff
+                border: none
+                font-size: 0.7em
+            textarea
+                height: 70px
+                outline: none
+                border: solid thin #f1f1f1
+                padding: 5px
+                width: 100%
+                font-size: 0.8em
+    div.paginas
+        display: flex
+        flex-wrap: wrap
+        margin-top: 15px
+        a
+            width: 24%
+            padding: 7px 5px
+            color: #ffffff
+            text-decoration: none
+            background: $red
+            margin-bottom: 10px
+            font-size: 0.7em
+            text-align: center
+            &:hover
+                background: red
+

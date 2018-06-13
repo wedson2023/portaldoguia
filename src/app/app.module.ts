@@ -15,6 +15,7 @@ import { AgendaDeEventosComponent } from './agenda-de-eventos/agenda-de-eventos.
 import { GuiaComercialComponent } from './guia-comercial/guia-comercial.component';
 import { ContatoComponent } from './contato/contato.component';
 import { AnuncieComponent } from './anuncie/anuncie.component';
+import { DetalhesComponent } from './guia-comercial/detalhes/detalhes.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { AnuncieComponent } from './anuncie/anuncie.component';
     AgendaDeEventosComponent,
     GuiaComercialComponent,
     ContatoComponent,
-    AnuncieComponent
+    AnuncieComponent,
+    DetalhesComponent
   ],
   imports: [
     BrowserModule,

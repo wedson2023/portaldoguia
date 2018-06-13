@@ -1,3 +1,4 @@
+import { DetalhesComponent } from './guia-comercial/detalhes/detalhes.component';
 import { AnuncieComponent } from './anuncie/anuncie.component';
 import { ContatoComponent } from './contato/contato.component';
 import { GuiaComercialComponent } from './guia-comercial/guia-comercial.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path : 'quem-somos', component : QuemSomosComponent },
   { path : 'noticias', component : NoticiasComponent },
   { path : 'agenda-de-eventos', component : AgendaDeEventosComponent },
+  { path : 'guia-comercial/:id', component : DetalhesComponent },
   { path : 'guia-comercial', component : GuiaComercialComponent },
   { path : 'anuncie', component : AnuncieComponent },
   { path : 'contato', component : ContatoComponent },
