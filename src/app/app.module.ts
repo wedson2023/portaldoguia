@@ -16,6 +16,7 @@ import { GuiaComercialComponent } from './guia-comercial/guia-comercial.componen
 import { ContatoComponent } from './contato/contato.component';
 import { AnuncieComponent } from './anuncie/anuncie.component';
 import { DetalhesComponent } from './guia-comercial/detalhes/detalhes.component';
+import { GaleriaComponent } from './guia-comercial/detalhes/galeria/galeria.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { DetalhesComponent } from './guia-comercial/detalhes/detalhes.component'
     GuiaComercialComponent,
     ContatoComponent,
     AnuncieComponent,
-    DetalhesComponent
+    DetalhesComponent,
+    GaleriaComponent
   ],
   imports: [
     BrowserModule,
