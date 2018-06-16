@@ -1,3 +1,4 @@
+import { EventoComponent } from './evento/evento.component';
 import { DetalhesComponent } from './guia-comercial/detalhes/detalhes.component';
 import { AnuncieComponent } from './anuncie/anuncie.component';
 import { ContatoComponent } from './contato/contato.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path : 'guia-comercial', component : GuiaComercialComponent },
   { path : 'anuncie', component : AnuncieComponent },
   { path : 'contato', component : ContatoComponent },
+  { path : 'evento', component : EventoComponent },
 ];
 
 @NgModule({

@@ -1,0 +1,91 @@
+@import '../../assets/sass/reset'
+div.conteiner
+    display: flex
+    justify-content: space-between
+    section.cadastro
+        width: 70%
+        h3
+            font-size: 1.5em
+        p
+            font-size: 0.9em
+            margin: 15px 0
+            color: #666666
+        form
+            h4
+                font-size: 1em
+                font-weight: bold
+            span
+                font-size: 0.8em
+                color: #333333
+            label
+                margin: 5px 0
+                input
+                    width: 100%
+                    padding: 5px
+                    outline: none
+                    border: solid thin #cccccc
+                    color: #666666
+                select
+                    @extend input
+                    padding: 8px
+            label.nome
+                display: flex
+                flex-direction: column
+                width: 100% 
+            label.local
+                @extend label.nome
+                input
+                    width: 100%
+            label.categoria
+                @extend label.nome
+                select
+                    padding: 8px
+                    outline: none
+                    color: #666666
+            label.descricao
+                @extend label.nome
+                textarea
+                    padding: 5px
+                    color: #666666
+                    outline: none
+            div
+                display: flex
+                justify-content: space-between
+                img.clip
+                    width: 37px
+                    height: 37px
+                    margin: 10px 0
+                    cursor: pointer
+                input.flyer
+                    width: 90%
+                    outline: none
+                    padding: 0 5px
+                    margin: 10px 0
+                label
+                    display: flex
+                    flex-direction: column
+                    width: 49%
+    section.segmentos
+        width: 27%
+        div
+            display: flex
+            flex-direction: column
+            background: $gray
+            border: solid thin $gray            
+            header
+                background: $red
+                padding: 10px
+                color: #ffffff
+                text-align: center
+                h3
+                    font-size: 1.2em
+            a
+                color: #666666
+                text-decoration: none
+                padding: 7px 5px
+                border-bottom: solid thin #cccccc
+                &:hover
+                    text-decoration: underline
+        img
+            width: 100%
+            margin-top: 15px

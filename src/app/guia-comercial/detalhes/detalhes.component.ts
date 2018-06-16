@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentInit } from '@angular/core';
+import { NgProgressService } from 'ng2-progressbar';
 
 @Component({
   selector: 'app-detalhes',
   templateUrl: './detalhes.component.html',
   styleUrls: ['./detalhes.component.sass']
 })
-export class DetalhesComponent implements OnInit {
+export class DetalhesComponent implements AfterContentInit {
 
-  constructor() { }
+  constructor(private progresso: NgProgressService) { 
+    this.progresso.start();
+  }
 
-  ngOnInit() {
+  ngAfterContentInit(){
+    this.progresso.done();
   }
 
 }

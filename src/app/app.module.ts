@@ -17,6 +17,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { AnuncieComponent } from './anuncie/anuncie.component';
 import { DetalhesComponent } from './guia-comercial/detalhes/detalhes.component';
 import { GaleriaComponent } from './guia-comercial/detalhes/galeria/galeria.component';
+import { EventoComponent } from './evento/evento.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { GaleriaComponent } from './guia-comercial/detalhes/galeria/galeria.comp
     ContatoComponent,
     AnuncieComponent,
     DetalhesComponent,
-    GaleriaComponent
+    GaleriaComponent,
+    EventoComponent
   ],
   imports: [
     BrowserModule,
