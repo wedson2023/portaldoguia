@@ -160,3 +160,80 @@ section.buscar
         p
             span
                 display: none
+
+@media screen and (max-width:1024px)
+    section.topo
+        div 
+            display: none
+    section.banner
+        width: 100%
+        margin: 15px 5px
+        img.logo
+            width: 35%
+        div.slide_600x100
+            display: none
+        div.slide_300x100
+            display: none
+    nav.menu
+        background: $red
+        display: none
+        div
+            width: $largura_content
+            margin: auto
+            display: flex
+            justify-content: space-around
+            a 
+                flex-grow: 1   
+                font-size: 0.9em        
+                padding: 10px
+                text-decoration: none
+                color: #ffffff
+                transition-duration: 0.3s
+                text-align: center
+                &:hover
+                    background: $red_hover_menu
+                div
+                    z-index: 1
+                    position: absolute
+                    width: 160px
+                    margin-top: 10px
+                    display: none
+                    background: $red
+                    margin-left: -0.7%                
+                    a
+                        display: flex
+                        flex-direction: column
+                        text-align: left !important
+    section.buscar  
+        padding: 0
+        margin: 10px 0
+        div
+            display: flex
+            flex-direction: column
+            padding: 10px 0
+            p
+                display: none
+            label
+                display: flex
+                justify-content: space-between
+                align-items: center
+            label.form-servico            
+                width: 100%
+                margin-right: 0
+                justify-content: center
+                input
+                    width: 100%
+                    margin: 0 10px
+            label.form-cidade
+                width: 100%
+                margin: 0
+                padding: 0 10px
+                display: flex
+                justify-content: space-between
+                input
+                    width: 75%
+                    margin: 0
+                button
+                    width: 20%
+                    font-size: 0.7em
+                    padding: 10px 5px
