@@ -24,7 +24,7 @@ section.bloco-1
             line-height: 15px
             font-size: 0.85em                    
             margin: 10px 0
-    div
+    div.group
         width: 35%
         article:first-child
             padding-bottom: 10px
@@ -153,8 +153,7 @@ section.bloco-5
     section
         display: flex
         justify-content: space-between
-        padding: 15px
-    
+        padding: 15px    
     div.transporte
         width: 23%
         height: 200px
@@ -349,3 +348,196 @@ section.bloco-8
         p
             color: #666666
             font-size: 0.7em 
+
+@media screen and (max-width:1024px)
+    section.bloco-1
+        display: block
+        margin-bottom: 0
+        width: 100%
+        padding: 5px
+        article.principal
+            width: 100%
+            margin-bottom: 10px
+            img
+                height: auto
+            a
+                font-size: 1.2em
+        div.group
+            width: 100%
+            article                
+                display: flex
+                justify-content: space-between 
+                padding-bottom: 10px
+                border-bottom: solid thin #f1f1f1 
+            div
+                width: 50%   
+            a.imagem 
+                height: 90px  
+            img
+                width: 100%
+            p.title    
+                font-size: 0.9em                
+                color: #666666
+                font-weight: 300
+            p       
+                font-size: 0.8em  
+                line-height: 20px 
+                font-weight: bold          
+                margin-top: 0
+                padding-left: 10px
+                color: $red
+    section.bloco-2
+        display: block
+        margin-bottom: 0
+        width: 100%
+        padding: 5px
+        article
+            width: 100%
+            display: flex
+            justify-content: space-between 
+            padding-bottom: 10px    
+            margin-bottom: 10px        
+            border-bottom: solid thin #f1f1f1
+            div
+                width: 50%   
+            a.imagem 
+                height: 90px  
+            img
+                width: 100%
+            p.title                    
+                color: #666666
+                font-size: 0.9em 
+                font-weight: 300               
+            p    
+                font-size: 0.8em
+                line-height: 25px
+                font-weight: bold                
+                margin-top: 0
+                padding-left: 10px
+                color: $red
+        article:last-child
+            margin-bottom: 0
+    section.bloco-3
+        display: block
+        margin-bottom: 0
+        width: 100%
+        padding: 5px
+        article
+            width: 100%
+            display: flex
+            justify-content: space-between 
+            margin-bottom: 10px
+            border-bottom: solid thin #f1f1f1 
+            div
+                width: 50%   
+            a.imagem 
+                height: 90px  
+            img
+                width: 100%
+            p.title                    
+                color: #666666
+                font-size: 0.9em 
+                font-weight: 300               
+            p    
+                font-size: 0.8em
+                line-height: 25px
+                font-weight: bold                
+                margin-top: 0
+                padding-left: 10px
+                color: $red
+    div.fique-por-dentro
+        display: none
+    section.bloco-4
+        display: none
+    section.bloco-5              
+        header               
+            p
+                font-size: 0.8em
+            span
+                font-size: 0.8em
+        section
+            flex-wrap: wrap   
+        div.transporte
+            width: 47%
+            margin-bottom: 10px
+        div.classificados
+            padding: 10px
+            margin-bottom: 10px
+            h3
+                font-size: 0.9em
+        article.telefone-farmacia
+            width: 47%           
+        article.categorias
+            width: 47%
+    section.bloco-6
+        display: flex
+        justify-content: space-between
+        margin: 25px 0
+        section.gastronomia
+            width: 100%
+            header
+                border-left: solid 10px $laranja
+                border-bottom: solid thin $laranja 
+                padding: 5px 5px 5px 10px
+                display: flex
+                justify-content: space-between
+                align-items: center
+                img
+                    padding: 5px
+                    background: $gray
+                    width: 25px
+                    height: 25px
+                    cursor: pointer
+                    margin-left: 5px
+                div
+                    width: 90%
+                h2
+                    font-size: 1.2em
+                    color: $laranja
+                p
+                    color: #666666
+                    font-size: 0.7em
+            
+            div.slide-slick-3
+                width: 100%
+                padding: 20px 10px
+                background: $gray
+                margin-top: 10px
+                div
+                    width: 50%
+                    margin: 0 10px 
+                    img.banner
+                        width: 100%
+                        height: 100px
+                        border: solid thin $gray
+                    img.icon
+                        width: 16px
+                        height: 16px
+                        margin-left: 10px
+                        cursor: pointer
+                    h3
+                        margin-bottom: 10px
+                        color: $laranja
+                        font-size: 1em
+                    p
+                        font-size: 0.7em
+                        color: #666666
+                        padding: 5px 0
+                    strong
+                        color: #000000
+                        font-size: 0.7em 
+                        display: flex
+                        align-items: center
+    section.bloco-7  
+        margin-top: 10px
+    section.bloco-8
+        flex-direction: column
+        article
+            width: 100%
+            padding: 0 20px
+            margin-bottom: 15px
+            header
+                img
+                    width: 25px
+                    height: 25px
+    

@@ -21,9 +21,10 @@ export class HomeComponent implements OnInit, AfterContentInit {
   }
 
   ngOnInit() {
+    let sl3 = window.innerWidth >= 1024 ? 3 : 1;
     $('.slide-slick-3').slick({
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: sl3,
+        slidesToScroll: sl3,
         arrows: false
       });
 
@@ -35,9 +36,11 @@ export class HomeComponent implements OnInit, AfterContentInit {
       $('.slide-slick-3').slick("slickNext");
     });
 
+    let quantidade = window.innerWidth >= 1024 ? 6 : 2;
+
     $('.slide-slick-6').slick({
-      slidesToShow: 5,
-      slidesToScroll: 5,
+      slidesToShow: quantidade,
+      slidesToScroll: quantidade,
       arrows: true,
       autoplay: true,
       autoplaySpeed: 5000
