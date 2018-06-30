@@ -53,6 +53,8 @@ section.banner
         width: 54.54%
     div.slide_300x100
         width: 27.27%
+    img.menu
+        display: none
 
 nav.menu
     background: $red
@@ -170,18 +172,27 @@ section.buscar
         margin: 15px 5px
         img.logo
             width: 35%
+            margin-left: 5px
         div.slide_600x100
             display: none
         div.slide_300x100
             display: none
+        img.menu
+            display: block
+            padding: 5px
+            background: $gray
+            margin-right: 15px
+            width: 45px
     nav.menu
-        background: $red
         display: none
+        position: fixed
+        top: 0
+        width: 50%
+        height: 100%
         div
             width: $largura_content
-            margin: auto
-            display: flex
-            justify-content: space-around
+            margin: none
+            flex-direction: column
             a 
                 flex-grow: 1   
                 font-size: 0.9em        
@@ -189,9 +200,9 @@ section.buscar
                 text-decoration: none
                 color: #ffffff
                 transition-duration: 0.3s
-                text-align: center
+                text-align: left
                 &:hover
-                    background: $red_hover_menu
+                    background: none
                 div
                     z-index: 1
                     position: absolute
