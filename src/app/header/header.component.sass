@@ -1,6 +1,6 @@
 @import '../../assets/sass/reset'
 section.topo
-    background: $gray
+    background: $yellow
     div        
         width: $largura_content
         margin: auto
@@ -17,20 +17,18 @@ section.topo
                 text-decoration: none
                 color: #000000 
                 padding: 5px 15px
-                border-left: solid thin #000000
                 &:hover
                     text-decoration: underline 
                 div
                     z-index: 1
                     position: absolute
-                    background: $gray
+                    background: $yellow
                     display: block
                     width: 170px
                     display: none
                     a
                         display: flex
                         flex-direction: column
-                        border-left: solid thin $gray
                         font-size: 1em !important
                         
             img
@@ -58,6 +56,8 @@ section.banner
 
 nav.menu
     background: $red
+    img
+        display: none
     div
         width: $largura_content
         margin: auto
@@ -169,10 +169,10 @@ section.buscar
             display: none
     section.banner
         width: 100%
-        margin: 15px 5px
+        margin: 15px 0
         img.logo
             width: 35%
-            margin-left: 5px
+            margin-left: 10px
         div.slide_600x100
             display: none
         div.slide_300x100
@@ -191,6 +191,8 @@ section.buscar
         top: 0
         height: 100%
         z-index: 100
+        img
+            display: block
         img.logo
             width: 40%
             margin: 10px auto  

@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit, AfterContentInit {
     $('.slide-slick-6').slick({
       slidesToShow: quantidade,
       slidesToScroll: quantidade,
-      arrows: true,
+      arrows: window.innerWidth >= 1024 ? true : false,
       autoplay: true,
       autoplaySpeed: 5000
     });

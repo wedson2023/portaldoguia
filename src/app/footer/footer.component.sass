@@ -85,7 +85,10 @@ section.noticias-agenda
                         color: #666666
                         font-size: 0.6em         
     div.slide_300x350
-        width: 28%       
+        width: 28%  
+        height: 350px !important
+        img
+            height: 350px !important    
 
 footer
     background: $azul
@@ -179,9 +182,11 @@ div.direitos
             flex-direction: column
             width: 100%
             img
-            width: 60%  
-            margin-bottom: 15px 
+                width: 40%  
+                margin-bottom: 0 
             div.link
+                width: 80%
+                margin: 25px 0
                 ul
                     width: 100%
                 ul:not(.ultimo)

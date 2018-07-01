@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit {
       $(this).children('div').slideToggle();
     }) 
     
-    $('section.banner img.menu').on('click', function(){
+    $('section.banner img.menu, nav.menu a').on('click', function(){
       var ativo = $('nav.menu').css('left');
       var distancia = ativo == '0px' ? "-50%" : 0;
 
