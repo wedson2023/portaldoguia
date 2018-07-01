@@ -184,37 +184,44 @@ section.buscar
             margin-right: 15px
             width: 45px
     nav.menu
-        display: none
+        display: block
         position: fixed
-        top: 0
         width: 50%
+        left: -50%
+        top: 0
         height: 100%
+        z-index: 100
+        img.logo
+            width: 40%
+            margin: 10px auto  
+            display: block
         div
-            width: $largura_content
-            margin: none
+            margin: 0
             flex-direction: column
-            a 
-                flex-grow: 1   
-                font-size: 0.9em        
+            width: 100%  
+            a.conta
+                border-top: solid thin #ffffff
+                margin-bottom: 10px
+            a  
+                font-size: 0.75em        
                 padding: 10px
-                text-decoration: none
-                color: #ffffff
-                transition-duration: 0.3s
                 text-align: left
+                border-bottom: solid thin #ffffff
                 &:hover
                     background: none
+                span
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    img
+                        width: 13px
+                        height: 13px
                 div
-                    z-index: 1
-                    position: absolute
-                    width: 160px
-                    margin-top: 10px
-                    display: none
+                    position: sticky
                     background: $red
-                    margin-left: -0.7%                
+                    margin-left: -10px                    
                     a
-                        display: flex
-                        flex-direction: column
-                        text-align: left !important
+                        border: none
     section.buscar  
         padding: 0
         margin: 10px 0
