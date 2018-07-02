@@ -16,7 +16,6 @@ import { GuiaComercialComponent } from './guia-comercial/guia-comercial.componen
 import { ContatoComponent } from './contato/contato.component';
 import { AnuncieComponent } from './anuncie/anuncie.component';
 import { DetalhesComponent } from './guia-comercial/detalhes/detalhes.component';
-import { GaleriaComponent } from './guia-comercial/detalhes/galeria/galeria.component';
 import { EventoComponent } from './evento/evento.component';
 
 
@@ -34,7 +33,6 @@ import { EventoComponent } from './evento/evento.component';
     ContatoComponent,
     AnuncieComponent,
     DetalhesComponent,
-    GaleriaComponent,
     EventoComponent
   ],
   imports: [
