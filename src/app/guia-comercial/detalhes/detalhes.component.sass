@@ -154,4 +154,68 @@ section.galeria
         font-size: 0.9em
         color: #666666
         margin: 15px 0
+    
+@media screen and (max-width:1024px) 
+    section.bloco-1
+        background: $gray 
+        margin: 0 10px  
+        div
+            flex-direction: column                    
+            article
+                width: 100%
+                text-align: center
+                h3
+                    color: $red
+                    font-size: 1.5em
+            ul
+                margin: 10px 0
+                width: 100%
+                li
+                    line-height: 15px
+                    margin-bottom: 7px
+                h3
+                    display: none
+                strong
+                    font-size: 0.8em
+                span
+                    font-size: 0.8em
+                    line-height: 25px
+                a
+                    font-size: 0.8em
+            form
+                width: 100%
+                strong
+                    display: none
+                h3
+                    display: none
+                input
+                    padding: 10px
+                input.campos
+                    border: #f1f1f1 solid thin         
+                input[type=submit]
+                    padding: 10px
+                textarea
+                    height: 100px
+        div.paginas
+            a
+                width: 100%
+    
+    section.bloco-2
+        margin: 15px 10px 
+        flex-direction: column 
+        .sobre
+            width: 100%
 
+        .mapa-video
+            width: 100%
+            iframe:first-child
+                margin-bottom: 15px
+
+    section.galeria   
+        margin: 0 10px 
+        section
+            display: block
+            div.grande
+                width: 100%
+            div.miniatura
+                display: none
