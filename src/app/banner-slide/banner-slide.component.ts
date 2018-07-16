@@ -14,7 +14,6 @@ export class BannerSlideComponent implements OnInit {
    }
 
   ngOnInit() {
-    console.log(this.imagens);
   }
 
 }

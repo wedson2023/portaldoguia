@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HttpService } from '../http.service';
 declare var $ :any;
 
@@ -9,16 +9,11 @@ declare var $ :any;
 })
 export class HeaderComponent implements OnInit {
 
-  public slide_600x100:object;
-  public slide_300x100:object;
+  @Input('imagens') imagens;
 
   constructor(private http: HttpService){ }
 
   ngOnInit(){
-    this.http.ApiGet('banner/header').subscribe((response:any) => {
-      this.slide_600x100 = response.resposta['600x100'];
-      this.slide_300x100 = response.resposta['300x100'];
-    });
 
     $('nav.menu a').hover(function(){
       $(this).children('div').slideToggle();

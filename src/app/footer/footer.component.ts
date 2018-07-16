@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 declare var $ :any;
 @Component({
   selector: 'app-footer',
@@ -7,15 +7,9 @@ declare var $ :any;
 })
 export class FooterComponent implements OnInit {
 
-  public slide_300x350:object;
+  @Input('imagens') imagens;
 
-  constructor() { 
-    this.slide_300x350 = [
-        { 'imagem' : './assets/imagens/banner/300x350.jpg' },
-        { 'imagem' : './assets/imagens/banner/300x350.jpg' },
-        { 'imagem' : './assets/imagens/banner/300x350.jpg' }
-    ]
-  }
+  constructor() {}
 
   ngOnInit() {
     $('a.agenda').on('click', function(){
