@@ -1,6 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgProgressModule } from 'ng2-progressbar';
+import { HttpService } from './http.service';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -38,9 +40,10 @@ import { EventoComponent } from './evento/evento.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgProgressModule
+    NgProgressModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ HttpService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

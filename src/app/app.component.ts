@@ -1,3 +1,4 @@
+import { HttpService } from './http.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent {
   public slide_300x350:object;
   
-  constructor(){
+  constructor(private http: HttpService){
     this.slide_300x350 = [
       { 'imagem' : './assets/imagens/banner/300x350.jpg' },
       { 'imagem' : './assets/imagens/banner/300x350.jpg' },
