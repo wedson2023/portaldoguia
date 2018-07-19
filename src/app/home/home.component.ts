@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterContentInit } from '@angular/core';
 import { NgProgressService } from 'ng2-progressbar';
+import { HttpService } from '../http.service';
 
 declare var $ :any;
 
@@ -9,18 +10,26 @@ declare var $ :any;
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit, AfterContentInit {
-  public slide_300x350:object;
-  
-  constructor(private progresso: NgProgressService) {
-    this.slide_300x350 = [
-      { 'imagem' : './assets/imagens/banner/300x350.jpg' },
-      { 'imagem' : './assets/imagens/banner/300x350.jpg' },
-      { 'imagem' : './assets/imagens/banner/300x350.jpg' }
-    ]
+
+  noticias;
+  constructor(
+    private progresso: NgProgressService,
+    private http: HttpService
+  ) {
+    this.http.ApiGet('noticias/home/listar').subscribe((response:any) => {
+      this.noticias = response.resposta;
+    });
+
     this.progresso.start();
   }
 
   ngOnInit() {
+    $('a').on('click', function(){
+      $('html, body').animate({
+        scrollTop: 0
+      }, 500);
+    })
+
     let sl3 = window.innerWidth >= 1024 ? 3 : 1;
     $('.slide-slick-3').slick({
         slidesToShow: sl3,

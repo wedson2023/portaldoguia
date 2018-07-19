@@ -13,7 +13,9 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {
     $('a.agenda').on('click', function(){
-      window.scrollTo(0,0);
+      $('html, body').animate({
+        scrollTop: 0
+      }, 500);
     })
   }
 

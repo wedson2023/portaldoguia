@@ -1,109 +1,108 @@
 <section class="home">
   <section class="bloco-1">
     <article class="principal">
-      <a href="javascript:void(0)">Água da chuva invade Rodovia e encobre carros</a>
-      <p>Por quatro horas os trabalhos da corporação foram intensos, foi utilizado a unidade de resgate e o caminhão auto tanque.</p>
-      <a href="javascript:void(0)">
-        <img src="./assets/imagens/noticia/agua-chuva.jpg" >
+      <a [routerLink]="'noticias/' + noticias?.destaque.url">{{ noticias?.destaque.titulo }}</a>
+      <p>{{ noticias?.destaque.subtitulo }}</p>
+      <a [routerLink]="noticias?.destaque.url" href="javascript:void(0)">
+        <img [hidden]="!noticias?.destaque.capa" [src]="noticias?.destaque.capa" >
       </a>
     </article>
     <div class="group">
       <article>
         <div>
-          <a class="imagem" href="javascript:void(0)">
-            <img src="./assets/imagens/noticia/agua-chuva.jpg" >
+          <a class="imagem" [routerLink]="'noticias/' + noticias?.noticias[0].url">
+            <img [hidden]="!noticias?.noticias[0].capa" [src]="noticias?.noticias[0].capa" >
           </a>
         </div>        
         <div>
-          <p>DESDE OUTUBRO</p>
-          <a href="javascript:void(0)">
-            <p class="title"> Água da chuva invade Rodovia e encobre carros</p>         
+          <p>{{ noticias?.noticias[0].fonte }}</p>
+          <a [routerLink]="'noticias/' + noticias?.noticias[0].url">
+            <p class="title">{{ noticias?.noticias[0].titulo }}</p>         
           </a>
-        </div>
-        
+        </div>        
       </article>
       <article>
         <div>
-          <a class="imagem" href="javascript:void(0)">
-            <img src="./assets/imagens/noticia/agua-chuva.jpg" >
+          <a class="imagem" [routerLink]="'noticias/' + noticias?.noticias[1].url">
+            <img [hidden]="!noticias?.noticias[1].capa" [src]="noticias?.noticias[1].capa" >
           </a>
         </div>        
         <div>
-          <p>DESDE OUTUBRO</p>
-          <a href="javascript:void(0)">
-            <p class="title"> Água da chuva invade Rodovia e encobre carros</p>         
+          <p>{{ noticias?.noticias[1].fonte }}</p>
+          <a [routerLink]="'noticias/' + noticias?.noticias[1].url">
+            <p class="title">{{ noticias?.noticias[1].titulo }}</p>         
           </a>
-        </div>
+        </div>        
       </article>
     </div>
   </section>
   <section class="bloco-2">
-    <article>
-      <div>
-        <a class="imagem" href="javascript:void(0)">
-          <img src="./assets/imagens/noticia/agua-chuva.jpg" >
-        </a>
-      </div>        
-      <div>
-        <p>DESDE OUTUBRO</p>
-        <a href="javascript:void(0)">
-          <p class="title"> Água da chuva invade Rodovia e encobre carros</p>         
-        </a>
-      </div>      
-    </article>
-    <article>
-      <div>
-        <a class="imagem" href="javascript:void(0)">
-          <img src="./assets/imagens/noticia/agua-chuva.jpg" >
-        </a>
-      </div>        
-      <div>
-        <p>DESDE OUTUBRO</p>
-        <a href="javascript:void(0)">
-          <p class="title"> Água da chuva invade Rodovia e encobre carros</p>         
-        </a>
-      </div>
-    </article>
+      <article>
+        <div>
+          <a class="imagem" [routerLink]="'noticias/' + noticias?.noticias[2].url">
+            <img [hidden]="!noticias?.noticias[2].capa" [src]="noticias?.noticias[2].capa" >
+          </a>
+        </div>        
+        <div>
+          <p>{{ noticias?.noticias[2].fonte }}</p>
+          <a [routerLink]="'noticias/' + noticias?.noticias[2].url">
+            <p class="title">{{ noticias?.noticias[2].titulo }}</p>         
+          </a>
+        </div>        
+      </article>
+      <article>
+        <div>
+          <a class="imagem" [routerLink]="'noticias/' + noticias?.noticias[3].url">
+            <img [hidden]="!noticias?.noticias[3].capa" [src]="noticias?.noticias[3].capa" >
+          </a>
+        </div>        
+        <div>
+          <p>{{ noticias?.noticias[3].fonte }}</p>
+          <a [routerLink]="'noticias/' + noticias?.noticias[3].url">
+            <p class="title">{{ noticias?.noticias[3].titulo }}</p>         
+          </a>
+        </div>        
+      </article>
   </section>
   <section class="bloco-3">
     <article>
       <div>
-        <a class="imagem" href="javascript:void(0)">
-          <img src="./assets/imagens/noticia/agua-chuva.jpg" >
+        <a class="imagem" [routerLink]="'noticias/' + noticias?.noticias[4].url">
+          <img [hidden]="!noticias?.noticias[4].capa" [src]="noticias?.noticias[4].capa" >
         </a>
       </div>        
       <div>
-        <p>DESDE OUTUBRO</p>
-        <a href="javascript:void(0)">
-          <p class="title"> Água da chuva invade Rodovia e encobre carros</p>         
+        <p>{{ noticias?.noticias[4].fonte }}</p>
+        <a [routerLink]="'noticias/' + noticias?.noticias[4].url">
+          <p class="title">{{ noticias?.noticias[4].titulo }}</p>         
         </a>
-      </div>      
+      </div>        
     </article>
     <article>
       <div>
-        <a class="imagem" href="javascript:void(0)">
-          <img src="./assets/imagens/noticia/agua-chuva.jpg" >
+        <a class="imagem" [routerLink]="'noticias/' + noticias?.noticias[5].url">
+          <img [hidden]="!noticias?.noticias[5].capa" [src]="noticias?.noticias[5].capa" >
         </a>
       </div>        
       <div>
-        <p>DESDE OUTUBRO</p>
-        <a href="javascript:void(0)">
-          <p class="title"> Água da chuva invade Rodovia e encobre carros</p>         
+        <p>{{ noticias?.noticias[5].fonte }}</p>
+        <a [routerLink]="'noticias/' + noticias?.noticias[5].url">
+          <p class="title">{{ noticias?.noticias[5].titulo }}</p>         
         </a>
-      </div>
-    </article>        
+      </div>        
+    </article>       
     <article>
       <div>
-        <a class="imagem" href="javascript:void(0)">
-          <img src="./assets/imagens/noticia/agua-chuva.jpg" >
+        <a class="imagem" [routerLink]="'noticias/' + noticias?.noticias[6].url">
+          <img [hidden]="!noticias?.noticias[6].capa" [src]="noticias?.noticias[6].capa" >
         </a>
       </div>        
       <div>
-        <p>DESDE OUTUBRO</p>
-        <a href="javascript:void(0)">
-          <p class="title"> Água da chuva invade Rodovia e encobre carros</p>         
+        <p>{{ noticias?.noticias[6].fonte }}</p>
+        <a [routerLink]="'noticias/' + noticias?.noticias[6].url">
+          <p class="title">{{ noticias?.noticias[6].titulo }}</p>         
         </a>
-      </div>
+      </div>        
     </article>
   </section>
   <div class="fique-por-dentro">

@@ -1,3 +1,4 @@
+import { NoticiaResolverService } from './noticias/detalhe-noticias/noticia-resolver.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -19,6 +20,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { AnuncieComponent } from './anuncie/anuncie.component';
 import { DetalhesComponent } from './guia-comercial/detalhes/detalhes.component';
 import { EventoComponent } from './evento/evento.component';
+import { DetalheNoticiasComponent } from './noticias/detalhe-noticias/detalhe-noticias.component';
 
 
 @NgModule({
@@ -35,7 +37,8 @@ import { EventoComponent } from './evento/evento.component';
     ContatoComponent,
     AnuncieComponent,
     DetalhesComponent,
-    EventoComponent
+    EventoComponent,
+    DetalheNoticiasComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,7 @@ import { EventoComponent } from './evento/evento.component';
     NgProgressModule,
     HttpClientModule
   ],
-  providers: [ HttpService ],
+  providers: [ HttpService, NoticiaResolverService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
