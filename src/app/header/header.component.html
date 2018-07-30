@@ -68,7 +68,7 @@
           <input type="search" placeholder="Ex.: produtos, serviços, empresas">
       </label>
       <label class="form-cidade">
-          <input type="search" placeholder="Ex.: cidade">
+          <input (change)="buscaCidade($event)" type="search" placeholder="Ex.: cidade">
           <button>BUSCAR</button>
       </label>        
   </div>

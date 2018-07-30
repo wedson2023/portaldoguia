@@ -21,6 +21,7 @@ import { AnuncieComponent } from './anuncie/anuncie.component';
 import { DetalhesComponent } from './guia-comercial/detalhes/detalhes.component';
 import { EventoComponent } from './evento/evento.component';
 import { DetalheNoticiasComponent } from './noticias/detalhe-noticias/detalhe-noticias.component';
+import { PaginasComponent } from './guia-comercial/paginas/paginas.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { DetalheNoticiasComponent } from './noticias/detalhe-noticias/detalhe-no
     AnuncieComponent,
     DetalhesComponent,
     EventoComponent,
-    DetalheNoticiasComponent
+    DetalheNoticiasComponent,
+    PaginasComponent
   ],
   imports: [
     BrowserModule,

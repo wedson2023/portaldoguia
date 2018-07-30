@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterContentInit } from '@angular/core';
 import { NgProgressService } from 'ng2-progressbar';
 import { HttpService } from '../http.service';
+import { Router } from '@angular/router';
 
 declare var $ :any;
 
@@ -24,7 +25,7 @@ export class HomeComponent implements OnInit, AfterContentInit {
   }
 
   ngOnInit() {
-    $('a').on('click', function(){
+    $('a').not('.fixed').on('click', function(){
       $('html, body').animate({
         scrollTop: 0
       }, 500);

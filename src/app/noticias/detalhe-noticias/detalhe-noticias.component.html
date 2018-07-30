@@ -1,1 +1,12 @@
 <div class="template"></div>
+<section [hidden]="!relacionados.length">
+<header>Nóticias <strong>Relacionadas</strong></header>
+<div>
+    <article class="noticias" [routerLink]="'/noticias/' + noticia.url" *ngFor="let noticia of relacionados">
+    <img [hidden]="!noticia.capa" [src]="noticia.capa" >
+    <span>{{ noticia.categoria }}</span>
+    <p>{{ noticia.titulo }}</p>
+    </article>  
+</div> 
+<a href>Mais notícias</a>
+</section>

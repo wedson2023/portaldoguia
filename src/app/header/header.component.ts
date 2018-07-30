@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpService } from '../http.service';
+import { Router } from '@angular/router';
 declare var $ :any;
 
 @Component({
@@ -11,7 +12,15 @@ export class HeaderComponent implements OnInit {
 
   @Input('imagens') imagens;
 
-  constructor(private http: HttpService){ }
+  constructor(
+    private http: HttpService,
+    private router: Router
+  ){ }  
+
+  buscaCidade(evento){
+    console.log(evento);
+    //this.router.navigate(['/guia-comercial', { pagina : 1 }]);
+  }
 
   ngOnInit(){
 

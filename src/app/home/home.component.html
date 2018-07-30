@@ -15,7 +15,7 @@
           </a>
         </div>        
         <div>
-          <p>{{ noticias?.noticias[0].fonte }}</p>
+          <p>{{ noticias?.noticias[0].categoria }}</p>
           <a [routerLink]="'noticias/' + noticias?.noticias[0].url">
             <p class="title">{{ noticias?.noticias[0].titulo }}</p>         
           </a>
@@ -28,7 +28,7 @@
           </a>
         </div>        
         <div>
-          <p>{{ noticias?.noticias[1].fonte }}</p>
+          <p>{{ noticias?.noticias[1].categoria }}</p>
           <a [routerLink]="'noticias/' + noticias?.noticias[1].url">
             <p class="title">{{ noticias?.noticias[1].titulo }}</p>         
           </a>
@@ -44,7 +44,7 @@
           </a>
         </div>        
         <div>
-          <p>{{ noticias?.noticias[2].fonte }}</p>
+          <p>{{ noticias?.noticias[2].categoria }}</p>
           <a [routerLink]="'noticias/' + noticias?.noticias[2].url">
             <p class="title">{{ noticias?.noticias[2].titulo }}</p>         
           </a>
@@ -57,7 +57,7 @@
           </a>
         </div>        
         <div>
-          <p>{{ noticias?.noticias[3].fonte }}</p>
+          <p>{{ noticias?.noticias[3].categoria }}</p>
           <a [routerLink]="'noticias/' + noticias?.noticias[3].url">
             <p class="title">{{ noticias?.noticias[3].titulo }}</p>         
           </a>
@@ -72,7 +72,7 @@
         </a>
       </div>        
       <div>
-        <p>{{ noticias?.noticias[4].fonte }}</p>
+        <p>{{ noticias?.noticias[4].categoria }}</p>
         <a [routerLink]="'noticias/' + noticias?.noticias[4].url">
           <p class="title">{{ noticias?.noticias[4].titulo }}</p>         
         </a>
@@ -85,7 +85,7 @@
         </a>
       </div>        
       <div>
-        <p>{{ noticias?.noticias[5].fonte }}</p>
+        <p>{{ noticias?.noticias[5].categoria }}</p>
         <a [routerLink]="'noticias/' + noticias?.noticias[5].url">
           <p class="title">{{ noticias?.noticias[5].titulo }}</p>         
         </a>
@@ -98,7 +98,7 @@
         </a>
       </div>        
       <div>
-        <p>{{ noticias?.noticias[6].fonte }}</p>
+        <p>{{ noticias?.noticias[6].categoria }}</p>
         <a [routerLink]="'noticias/' + noticias?.noticias[6].url">
           <p class="title">{{ noticias?.noticias[6].titulo }}</p>         
         </a>
@@ -107,35 +107,35 @@
   </section>
   <div class="fique-por-dentro">
     <p><strong>FIQUE</strong> POR DENTRO</p>
-    <a href="javascript:void(0)">HORÓSCOPO</a>
-    <a href="javascript:void(0)">LOTERIAS</a>
-    <a href="javascript:void(0)">NOVELAS</a>
-    <a href="javascript:void(0)">AGRONEGÓCIO</a>
+    <a class="fixed">HORÓSCOPO</a>
+    <a class="fixed">LOTERIAS</a>
+    <a class="fixed">NOVELAS</a>
+    <a class="fixed">AGRONEGÓCIO</a>
   </div>
   <section class="bloco-4">
     <article>
-      <a href="javascript:void(0)">
+      <a class="fixed" target="_blank" href="https://joaobidu.com.br/">
         <img src="./assets/imagens/horoscopo.jpg" >  
         <strong>HORÓSCOPO</strong>
         <p>Confira a previsão dos astros para o seu signo</p>
       </a>
     </article>
     <article>
-      <a href="javascript:void(0)">        
+      <a class="fixed" target="_blank" href="http://loterias.caixa.gov.br/wps/portal/loterias">      
         <img src="./assets/imagens/mega-sena.jpg" >
         <strong>LOTERIAS</strong>
         <p>Confira os resultados dos jogos</p>
       </a>
     </article>
     <article>
-      <a href="javascript:void(0)">        
+      <a class="fixed" target="_blank" href="https://www.tvnovelas.com.br/novelas/">       
         <img src="./assets/imagens/agronegocio.jpg" >
         <strong>AGRONEGÓCIO</strong>
         <p>Fica por dentro das notícias do mercado agricolas</p>
       </a>
     </article>
     <article>
-      <a href="javascript:void(0)">
+      <a class="fixed" target="_blank" href="https://www.agrolink.com.br/"> 
         <img src="./assets/imagens/resumos-de-novelas.jpg" >
         <strong>NOVELAS</strong>
         <p>Veja os próximos capitulos das novelas</p>

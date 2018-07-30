@@ -11,17 +11,26 @@ declare var $:any;
 })
 export class DetalheNoticiasComponent implements OnInit {
 
-  noticia;
+  noticias;
+  relacionados;
   constructor(
     private progresso: NgProgressService,
     private route: ActivatedRoute
   ) { 
-    this.noticia = this.route.snapshot.data.data.resposta.template;
+    this.noticias = this.route.snapshot.data.data.resposta;
+    this.relacionados = this.route.snapshot.data.data.relacionados;
+
     this.progresso.start();
   }
 
   ngOnInit() {
-    $('div.template').html(this.noticia);    
+    $('div.template').html(this.noticias.template);   
+
+    $('body').on('click', 'article', function(){
+      $('html, body').animate({
+        scrollTop: 0
+      }, 500);
+    }) 
   }
 
   ngAfterContentInit(){

@@ -1,97 +1,26 @@
-<div class="conteiner">
-  <section class="guia-comercial">
-    <header>GUIA COMERCIAL <strong>TELEFONES</strong></header>
-
-    <article>
+<div class="conteiner"> 
+  <section class="guia-comercial"> 
+    <!-- <router-outlet (quantidade)="onQuantidade($event)" class="paginas"></router-outlet> -->
+    <header>GUIA COMERCIAL <strong>TELEFONES</strong></header>    
+    <article *ngFor="let empresa of empresas.resposta">
       <div class="logo">
-        <img src="./assets/imagens/guia-comercial/logo.jpg" alt="">
+        <img [src]="empresa?.capa" alt="">
       </div>
       <div>
-        <a routerLink="/guia-comercial/1">Mais detalhes</a>
-        <h4>Alfa Limpeza e Descartavél</h4>
-        <p>Rua São José, 22 Centro Estreito - MA</p>
-        <strong>(99) 3531 - 0402 / 98123 - 4040 zap</strong>
-        <p>portaldoguia@hotmail.com</p>
-        <p>www.portaldoguia.com.br</p>
-      </div>
-    </article>
-    <article>
-      <div class="logo">
-        <img src="./assets/imagens/guia-comercial/logo.jpg" alt="">
-      </div>
-      <div>
-        <a routerLink="/guia-comercial/1">Mais detalhes</a>
-        <h4>Alfa Limpeza e Descartavél</h4>
-        <p>Rua São José, 22 Centro Estreito - MA</p>
-        <strong>(99) 3531 - 0402 / 98123 - 4040 zap</strong>
-        <p>portaldoguia@hotmail.com</p>
-        <p>www.portaldoguia.com.br</p>
-      </div>
-    </article>
-    <article>
-      <div class="logo">
-        <img src="./assets/imagens/guia-comercial/logo.jpg" alt="">
-      </div>
-      <div>
-        <a routerLink="/guia-comercial/1">Mais detalhes</a>
-        <h4>Alfa Limpeza e Descartavél</h4>
-        <p>Rua São José, 22 Centro Estreito - MA</p>
-        <strong>(99) 3531 - 0402 / 98123 - 4040 zap</strong>
-        <p>portaldoguia@hotmail.com</p>
-        <p>www.portaldoguia.com.br</p>
-      </div>
-    </article>
-    <article>
-      <div class="logo">
-        <img src="./assets/imagens/guia-comercial/logo.jpg" alt="">
-      </div>
-      <div>
-        <a routerLink="/guia-comercial/1">Mais detalhes</a>
-        <h4>Alfa Limpeza e Descartavél</h4>
-        <p>Rua São José, 22 Centro Estreito - MA</p>
-        <strong>(99) 3531 - 0402 / 98123 - 4040 zap</strong>
-        <p>portaldoguia@hotmail.com</p>
-        <p>www.portaldoguia.com.br</p>
-      </div>
-    </article>
-    <article>
-      <div class="logo">
-        <img src="./assets/imagens/guia-comercial/logo.jpg" alt="">
-      </div>
-      <div>
-        <a routerLink="/guia-comercial/1">Mais detalhes</a>
-        <h4>Alfa Limpeza e Descartavél</h4>
-        <p>Rua São José, 22 Centro Estreito - MA</p>
-        <strong>(99) 3531 - 0402 / 98123 - 4040 zap</strong>
-        <p>portaldoguia@hotmail.com</p>
-        <p>www.portaldoguia.com.br</p>
-      </div>
-    </article>
-    <article>
-      <div class="logo">
-        <img src="./assets/imagens/guia-comercial/logo.jpg" alt="">
-      </div>
-      <div>
-        <a routerLink="/guia-comercial/1">Mais detalhes</a>
-        <h4>Alfa Limpeza e Descartavél</h4>
-        <p>Rua São José, 22 Centro Estreito - MA</p>
-        <strong>(99) 3531 - 0402 / 98123 - 4040 zap</strong>
-        <p>portaldoguia@hotmail.com</p>
-        <p>www.portaldoguia.com.br</p>
+        <a routerLink="/guia-comercial/{{ empresa.id }}">Mais detalhes</a>
+        <h4>{{ empresa.nome }}</h4>
+        <p>{{ empresa.endereco }}</p>
+        <strong>{{ empresa.telefones }}</strong>
+        <p>{{ empresa.email }}</p>
+        <p>{{ empresa.site }}</p>
       </div>
     </article>
     <nav>
-      <a href="javascript:void(0)">Anterior</a>  
+      <!-- <a href="javascript:void(0)">Anterior</a>   -->
       <ul>
-        <li><a href="javascript:void(0)">1</a></li>
-        <li><a href="javascript:void(0)">2</a></li>
-        <li><a href="javascript:void(0)">3</a></li>
-        <li><a href="javascript:void(0)">4</a></li>
-        <li><a href="javascript:void(0)">5</a></li>
-        <li><a href="javascript:void(0)">6</a></li>
-        <li><a href="javascript:void(0)">7</a></li>
+        <li *ngFor="let i of quantidade"><a routerLink="/guia-comercial" [queryParams]="{ pagina : i, segmento : segmento, cidade : cidade }">{{ i }}</a></li>
       </ul>
-      <a href="javascript:void(0)">Próximo</a>
+      <!-- <a href="javascript:void(0)">Próximo</a> -->
     </nav>
   </section>
   <section class="segmentos">
@@ -99,19 +28,7 @@
       <header>
         <h3>Segmentos</h3> 
       </header>
-      <a href="javascript:void(0)">Academia</a>
-      <a href="javascript:void(0)">Açai</a>
-      <a href="javascript:void(0)">Acessórios p/ Veiculos</a>
-      <a href="javascript:void(0)">Açougue</a>
-      <a href="javascript:void(0)">Adapec</a>
-      <a href="javascript:void(0)">Pizzaria</a>
-      <a href="javascript:void(0)">Areia e Seixo</a>
-      <a href="javascript:void(0)">Calçados</a>
-      <a href="javascript:void(0)">Gráfica</a>
-      <a href="javascript:void(0)">Agência Bancaria</a>
-      <a href="javascript:void(0)">Agropecuária</a>
-      <a href="javascript:void(0)">Alarme</a>
-      <a href="javascript:void(0)">Ar Condicionado</a>
+      <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : segmento.id, cidade : cidade }" *ngFor="let segmento of segmentos">{{ segmento.nome }}</a>
     </div>
   </section>
 </div>
