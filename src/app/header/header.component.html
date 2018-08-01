@@ -68,7 +68,7 @@
           <input type="search" placeholder="Ex.: produtos, serviços, empresas">
       </label>
       <label class="form-cidade">
-          <input (change)="buscaCidade($event)" type="search" placeholder="Ex.: cidade">
+          <input [(ngModel)]="cidade" name="cidade" (keyup.enter)="buscaCidade($event, cidade)" type="search" placeholder="Ex.: cidade">
           <button>BUSCAR</button>
       </label>        
   </div>

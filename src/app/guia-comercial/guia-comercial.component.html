@@ -2,7 +2,7 @@
   <section class="guia-comercial"> 
     <!-- <router-outlet (quantidade)="onQuantidade($event)" class="paginas"></router-outlet> -->
     <header>GUIA COMERCIAL <strong>TELEFONES</strong></header>    
-    <article *ngFor="let empresa of empresas.resposta">
+    <article *ngFor="let empresa of empresas">
       <div class="logo">
         <img [src]="empresa?.capa" alt="">
       </div>
@@ -18,7 +18,7 @@
     <nav>
       <!-- <a href="javascript:void(0)">Anterior</a>   -->
       <ul>
-        <li *ngFor="let i of quantidade"><a routerLink="/guia-comercial" [queryParams]="{ pagina : i, segmento : segmento, cidade : cidade }">{{ i }}</a></li>
+        <li *ngFor="let i of quantidade"><a routerLink="/guia-comercial" [queryParams]="{ pagina : i, segmento : segmento, cidade : cidade, categoria : categoria }">{{ i }}</a></li>
       </ul>
       <!-- <a href="javascript:void(0)">Próximo</a> -->
     </nav>
@@ -28,7 +28,7 @@
       <header>
         <h3>Segmentos</h3> 
       </header>
-      <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : segmento.id, cidade : cidade }" *ngFor="let segmento of segmentos">{{ segmento.nome }}</a>
+      <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : segmento.id, cidade : cidade, categoria : categoria }" *ngFor="let segmento of segmentos">{{ segmento.nome }}</a>
     </div>
   </section>
 </div>

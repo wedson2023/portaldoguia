@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgProgressModule } from 'ng2-progressbar';
 import { HttpService } from './http.service';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -21,8 +22,6 @@ import { AnuncieComponent } from './anuncie/anuncie.component';
 import { DetalhesComponent } from './guia-comercial/detalhes/detalhes.component';
 import { EventoComponent } from './evento/evento.component';
 import { DetalheNoticiasComponent } from './noticias/detalhe-noticias/detalhe-noticias.component';
-import { PaginasComponent } from './guia-comercial/paginas/paginas.component';
-
 
 @NgModule({
   declarations: [
@@ -39,14 +38,14 @@ import { PaginasComponent } from './guia-comercial/paginas/paginas.component';
     AnuncieComponent,
     DetalhesComponent,
     EventoComponent,
-    DetalheNoticiasComponent,
-    PaginasComponent
+    DetalheNoticiasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgProgressModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ HttpService, NoticiaResolverService ],
   bootstrap: [AppComponent]

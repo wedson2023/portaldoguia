@@ -1,4 +1,3 @@
-import { PaginasComponent } from './guia-comercial/paginas/paginas.component';
 import { DetalheNoticiasComponent } from './noticias/detalhe-noticias/detalhe-noticias.component';
 import { EventoComponent } from './evento/evento.component';
 import { DetalhesComponent } from './guia-comercial/detalhes/detalhes.component';
@@ -20,12 +19,7 @@ const routes: Routes = [
   { path : 'noticias', component : NoticiasComponent },
   { path : 'agenda-de-eventos', component : AgendaDeEventosComponent },
   { path : 'guia-comercial/:id', component : DetalhesComponent },
-  { path : 'guia-comercial', component : GuiaComercialComponent, 
-    children : [
-      { path : '', component : PaginasComponent  },  
-      { path : 'pagina/:pagina', component : PaginasComponent  },          
-    ] 
-  },
+  { path : 'guia-comercial', component : GuiaComercialComponent},
   { path : 'anuncie', component : AnuncieComponent },
   { path : 'contato', component : ContatoComponent },
   { path : 'evento', component : EventoComponent },

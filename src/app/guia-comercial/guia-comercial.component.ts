@@ -17,13 +17,14 @@ export class GuiaComercialComponent {
   pagina;
   segmento;
   cidade;
+  categoria;
 
   constructor(private route: ActivatedRoute, private progresso: NgProgressService, private http: HttpService) { 
     this.http.ApiGet('guia-comercial/page/quantidade').subscribe((response:any) => {
       this.quantidade = response;
     });
 
-    this.http.ApiGet('segmentos/listar').subscribe((response:any) => {
+    this.http.ApiGet('guia-comercial/page/segmentos').subscribe((response:any) => {
       this.segmentos = response.resposta;
     });
 
@@ -34,14 +35,15 @@ export class GuiaComercialComponent {
     this.progresso.start();    
 
     this.route.queryParams.subscribe((query:any) => {
-      this.http.ApiGet('guia-comercial/page/' + ( query['pagina'] || 1 ) + '/' + ( query['segmento'] || 'segmento' ) + '/' + ( query['cidade'] || 'cidade' )).subscribe((response:any) => {
-        this.empresas = response;
+      this.http.ApiGet('guia-comercial/page/' + ( query['pagina'] || 1 ) + '/' + ( query['segmento'] || 'segmento' ) + '/' + ( query['cidade'] || 'cidade' ) + '/' + ( query['categoria'] || 'categoria')).subscribe((response:any) => {
+        this.empresas = response.resposta;
 
         this.quantidade = response.nav;
 
         this.pagina = ( query['pagina'] || 'pagina' );
         this.segmento = ( query['segmento'] || 'segmento' );
         this.cidade = ( query['cidade'] || 'cidade' );
+        this.categoria = ( query['categoria'] || 'categoria' );
 
         $('html, body').animate({
           scrollTop: 0

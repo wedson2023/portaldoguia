@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router } from '@angular/router';
 declare var $ :any;
@@ -11,15 +11,14 @@ declare var $ :any;
 export class HeaderComponent implements OnInit {
 
   @Input('imagens') imagens;
-
+  cidade;
   constructor(
     private http: HttpService,
     private router: Router
   ){ }  
 
-  buscaCidade(evento){
-    console.log(evento);
-    //this.router.navigate(['/guia-comercial', { pagina : 1 }]);
+  buscaCidade(cidade){
+    this.router.navigate(['guia-comercial'], { queryParams : { pagina : 1, segmento : 'segmento', cidade : this.cidade, categoria : 'categoria'  } })
   }
 
   ngOnInit(){
