@@ -12,13 +12,13 @@ declare var $ :any;
 })
 export class HomeComponent implements OnInit, AfterContentInit {
 
-  noticias;
+  registros;
   constructor(
     private progresso: NgProgressService,
     private http: HttpService
   ) {
-    this.http.ApiGet('noticias/home/listar').subscribe((response:any) => {
-      this.noticias = response.resposta;
+    this.http.ApiGet('page/get-home').subscribe((response:any) => {
+      this.registros = response.resposta;
     });
 
     this.progresso.start();

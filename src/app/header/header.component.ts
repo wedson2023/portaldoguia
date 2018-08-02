@@ -11,7 +11,7 @@ declare var $ :any;
 export class HeaderComponent implements OnInit {
 
   @Input('imagens') imagens;
-  cidade;
+  cidade:any;
   constructor(
     private http: HttpService,
     private router: Router

@@ -12,7 +12,7 @@ export class NoticiaResolverService implements Resolve<Observable<any>> {
    }
 
   resolve(route: ActivatedRouteSnapshot){
-    return this.http.ApiGet('noticias/mostrar/' + route.params.url);
+    return this.http.ApiGet('page/mostrar-noticia/' + route.params.url);
   }
 
 }
