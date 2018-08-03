@@ -11,8 +11,8 @@
         <h4>{{ empresa.nome }}</h4>
         <p>{{ empresa.endereco }}</p>
         <strong>{{ empresa.telefones }}</strong>
-        <p>{{ empresa.email }}</p>
-        <p>{{ empresa.site }}</p>
+        <p>{{ ( empresa.email?.url || '' ) }}</p>
+        <p>{{ ( empresa.site?.url || '' ) }}</p>
       </div>
     </article>
     <nav>

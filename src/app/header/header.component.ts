@@ -12,10 +12,15 @@ export class HeaderComponent implements OnInit {
 
   @Input('imagens') imagens;
   cidade:any;
+  registros;
   constructor(
     private http: HttpService,
     private router: Router
-  ){ }  
+  ){
+    this.http.ApiGet('page/get-header').subscribe((response:any) => {
+      this.registros = response.resposta;
+    });
+  }  
 
   buscaCidade(cidade){
     this.router.navigate(['guia-comercial'], { queryParams : { pagina : 1, segmento : 'segmento', cidade : this.cidade, categoria : 'categoria'  } })

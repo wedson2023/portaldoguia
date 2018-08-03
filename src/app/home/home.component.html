@@ -153,10 +153,10 @@
         <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : segmento.id, cidade : 'cidade', categoria : 'categoria' }" *ngFor="let segmento of registros?.transportes">{{ segmento.nome }}</a>
       </div>
       <article class="telefone-farmacia">
-        <a title="Telefones úteis" href="javascript:void(0)">
+        <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : 34, cidade : 'cidade', categoria : 'categoria' }" title="Telefones úteis">
           <img src="./assets/imagens/telefone.png" />          
         </a>
-        <a title="Plantão de Farmácia" href="javascript:void(0)">
+        <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : 3, cidade : 'cidade', categoria : 'categoria' }" title="Plantão de Farmácia">
           <img src="./assets/imagens/farmacia.png" />          
         </a>
       </article>
@@ -182,11 +182,11 @@
         <img class="next" title="Avançar" src="./assets/imagens/icon/icons8-avancar-26.png" >    
       </header>
       <div class="slide-slick-3">
-        <div>
-          <h3>Degraus Restaurante</h3>
-          <img class="banner" src="./assets/imagens/guia-comercial/222x100.jpg" >
+        <div *ngFor="let gastronomia of registros?.gastronomia">
+          <h3>{{ gastronomia.nome }}</h3>
+          <img class="banner" [src]="gastronomia.capa" >
           <p>
-            Self-service, maior variedade, centro de varginha, almoçar no centro de varginha, maior variedade, comida boa, serviço, rápido, ambiente agradável.
+          {{ gastronomia.endereco }}
           </p>
           <strong>
             Saiba mais | compartilhe: 
@@ -195,62 +195,6 @@
             <img class="icon" src="./assets/imagens/icon-twitter.png" >
           </strong>
         </div>
-
-        <div>
-            <h3>Degraus Restaurante</h3>
-            <img class="banner" src="./assets/imagens/guia-comercial/222x100.jpg" >
-            <p>
-              Self-service, maior variedade, centro de varginha, almoçar no centro de varginha, maior variedade, comida boa, serviço, rápido, ambiente agradável.
-            </p>
-            <strong>
-              Saiba mais | compartilhe: 
-              <img class="icon" src="./assets/imagens/icon-facebook.png" >
-              <img class="icon" src="./assets/imagens/icon-linkedin.png" >
-              <img class="icon" src="./assets/imagens/icon-twitter.png" >
-            </strong>
-          </div>
-
-          <div>
-              <h3>Degraus Restaurante</h3>
-              <img class="banner" src="./assets/imagens/guia-comercial/222x100.jpg" >
-              <p>
-                Self-service, maior variedade, centro de varginha, almoçar no centro de varginha, maior variedade, comida boa, serviço, rápido, ambiente agradável.
-              </p>
-              <strong>
-                Saiba mais | compartilhe: 
-                <img class="icon" src="./assets/imagens/icon-facebook.png" >
-                <img class="icon" src="./assets/imagens/icon-linkedin.png" >
-                <img class="icon" src="./assets/imagens/icon-twitter.png" >
-              </strong>
-            </div>
-
-            <div>
-              <h3>Degraus Restaurante</h3>
-              <img class="banner" src="./assets/imagens/guia-comercial/222x100.jpg" >
-              <p>
-                Self-service, maior variedade, centro de varginha, almoçar no centro de varginha, maior variedade, comida boa, serviço, rápido, ambiente agradável.
-              </p>
-              <strong>
-                Saiba mais | compartilhe: 
-                <img class="icon" src="./assets/imagens/icon-facebook.png" >
-                <img class="icon" src="./assets/imagens/icon-linkedin.png" >
-                <img class="icon" src="./assets/imagens/icon-twitter.png" >
-              </strong>
-            </div>
-
-            <div>
-              <h3>Degraus Restaurante</h3>
-              <img class="banner" src="./assets/imagens/guia-comercial/222x100.jpg" >
-              <p>
-                Self-service, maior variedade, centro de varginha, almoçar no centro de varginha, maior variedade, comida boa, serviço, rápido, ambiente agradável.
-              </p>
-              <strong>
-                Saiba mais | compartilhe: 
-                <img class="icon" src="./assets/imagens/icon-facebook.png" >
-                <img class="icon" src="./assets/imagens/icon-linkedin.png" >
-                <img class="icon" src="./assets/imagens/icon-twitter.png" >
-              </strong>
-            </div>
       </div>
     </section>
   </section>
