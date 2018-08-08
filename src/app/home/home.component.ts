@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterContentInit } from '@angular/core';
 import { NgProgressService } from 'ng2-progressbar';
 import { HttpService } from '../http.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute  } from '@angular/router';
 
 declare var $ :any;
 
@@ -15,12 +15,10 @@ export class HomeComponent implements OnInit, AfterContentInit {
   registros;
   constructor(
     private progresso: NgProgressService,
-    private http: HttpService
-  ) {
-    this.http.ApiGet('page/get-home').subscribe((response:any) => {
-      this.registros = response.resposta;
-    });
-
+    private http: HttpService,
+    private route: ActivatedRoute
+  ) {    
+    this.registros = this.route.snapshot.data.data.resposta;
     this.progresso.start();
   }
 

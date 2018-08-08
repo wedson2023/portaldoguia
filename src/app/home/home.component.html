@@ -182,11 +182,89 @@
         <img class="next" title="Avançar" src="./assets/imagens/icon/icons8-avancar-26.png" >    
       </header>
       <div class="slide-slick-3">
-        <div *ngFor="let gastronomia of registros?.gastronomia">
-          <h3>{{ gastronomia.nome }}</h3>
-          <img class="banner" [src]="gastronomia.capa" >
+        <div>
+          <h3>{{ registros?.gastronomia[0].nome }}</h3>
+          <img class="banner" [src]="registros?.gastronomia[0].capa" >
           <p>
-          {{ gastronomia.endereco }}
+          {{ registros?.gastronomia[0].endereco }}
+          </p>
+          <strong>
+            Saiba mais | compartilhe: 
+            <img class="icon" src="./assets/imagens/icon-facebook.png" >
+            <img class="icon" src="./assets/imagens/icon-linkedin.png" >
+            <img class="icon" src="./assets/imagens/icon-twitter.png" >
+          </strong>
+        </div>
+        <div>
+          <h3>{{ registros?.gastronomia[1].nome }}</h3>
+          <img class="banner" [src]="registros?.gastronomia[1].capa" >
+          <p>
+          {{ registros?.gastronomia[1].endereco }}
+          </p>
+          <strong>
+            Saiba mais | compartilhe: 
+            <img class="icon" src="./assets/imagens/icon-facebook.png" >
+            <img class="icon" src="./assets/imagens/icon-linkedin.png" >
+            <img class="icon" src="./assets/imagens/icon-twitter.png" >
+          </strong>
+        </div>
+        <div>
+          <h3>{{ registros?.gastronomia[2].nome }}</h3>
+          <img class="banner" [src]="registros?.gastronomia[2].capa" >
+          <p>
+          {{ registros?.gastronomia[2].endereco }}
+          </p>
+          <strong>
+            Saiba mais | compartilhe: 
+            <img class="icon" src="./assets/imagens/icon-facebook.png" >
+            <img class="icon" src="./assets/imagens/icon-linkedin.png" >
+            <img class="icon" src="./assets/imagens/icon-twitter.png" >
+          </strong>
+        </div>
+        <div *ngIf="registros?.gastronomia[3]">
+          <h3>{{ registros?.gastronomia[3].nome }}</h3>
+          <img class="banner" [src]="registros?.gastronomia[3].capa" >
+          <p>
+          {{ registros?.gastronomia[3].endereco }}
+          </p>
+          <strong>
+            Saiba mais | compartilhe: 
+            <img class="icon" src="./assets/imagens/icon-facebook.png" >
+            <img class="icon" src="./assets/imagens/icon-linkedin.png" >
+            <img class="icon" src="./assets/imagens/icon-twitter.png" >
+          </strong>
+        </div>
+        <div *ngIf="registros?.gastronomia[3]">
+          <h3>{{ registros?.gastronomia[3].nome }}</h3>
+          <img class="banner" [src]="registros?.gastronomia[3].capa" >
+          <p>
+          {{ registros?.gastronomia[3].endereco }}
+          </p>
+          <strong>
+            Saiba mais | compartilhe: 
+            <img class="icon" src="./assets/imagens/icon-facebook.png" >
+            <img class="icon" src="./assets/imagens/icon-linkedin.png" >
+            <img class="icon" src="./assets/imagens/icon-twitter.png" >
+          </strong>
+        </div>
+        <div *ngIf="registros?.gastronomia[4]">
+          <h3>{{ registros?.gastronomia[4].nome }}</h3>
+          <img class="banner" [src]="registros?.gastronomia[4].capa" >
+          <p>
+          {{ registros?.gastronomia[4].endereco }}
+          </p>
+          <strong>
+            Saiba mais | compartilhe: 
+            <img class="icon" src="./assets/imagens/icon-facebook.png" >
+            <img class="icon" src="./assets/imagens/icon-linkedin.png" >
+            <img class="icon" src="./assets/imagens/icon-twitter.png" >
+          </strong>
+        </div>
+        <div *ngIf="registros?.gastronomia[5]">
+          <h3>{{ registros?.gastronomia[5].nome }}</h3>
+          <img class="banner" [src]="registros?.gastronomia[5].capa" >
+          <p>
+          {{ registros?.gastronomia[5].endereco }}
           </p>
           <strong>
             Saiba mais | compartilhe: 

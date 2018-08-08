@@ -1,16 +1,16 @@
 <div class="conteiner"> 
   <section class="guia-comercial"> 
     <!-- <router-outlet (quantidade)="onQuantidade($event)" class="paginas"></router-outlet> -->
-    <header>GUIA COMERCIAL <strong>TELEFONES</strong></header>    
+    <header>GUIA COMERCIAL <strong>TELEFONES</strong></header> 
     <article *ngFor="let empresa of empresas">
       <div class="logo">
-        <img [src]="empresa?.capa" alt="">
+        <img [src]="empresa.capa" alt="">
       </div>
       <div>
         <a routerLink="/guia-comercial/{{ empresa.id }}">Mais detalhes</a>
         <h4>{{ empresa.nome }}</h4>
         <p>{{ empresa.endereco }}</p>
-        <strong>{{ empresa.telefones }}</strong>
+        <strong>{{ ( empresa.telefones || '' ) }}</strong>
         <p>{{ ( empresa.email?.url || '' ) }}</p>
         <p>{{ ( empresa.site?.url || '' ) }}</p>
       </div>

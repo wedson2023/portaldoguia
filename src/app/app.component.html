@@ -6,12 +6,12 @@
     </div>
   <aside>
     <div class="slide_300x350"><app-banner-slide [imagens]="slide300x350"></app-banner-slide></div>
-    <img class="banner" [src]="banner300x250_01" alt="">
+    <img class="banner" [src]="( banner300x250_01 || '')" alt="">
     <img class="banner parceiro" src="./assets/imagens/nosso-parceiro.jpg" alt="">
-    <img class="banner" [src]="banner300x250_02" alt="">
-    <img class="banner" [src]="banner300x350_01" alt="">
-    <img class="banner" [src]="banner300x250_03" alt="">
-    <img class="banner" [src]="banner300x250_04" alt="">
+    <img class="banner" [src]="( banner300x250_02 || '')" alt="">
+    <img class="banner" [src]="( banner300x350_01 || '')" alt="">
+    <img class="banner" [src]="( banner300x250_03 || '')" alt="">
+    <img class="banner" [src]="( banner300x250_04 || '')" alt="">
   </aside>  
 </div>
 

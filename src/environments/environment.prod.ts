@@ -1,4 +1,4 @@
 export const environment = {
-  api: 'http://portaldoguia.com.br/api/',
-  production: true
+  production: true,
+  api: 'http://portaldoguia.com.br/api/'  
 };

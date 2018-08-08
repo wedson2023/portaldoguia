@@ -1,3 +1,4 @@
+import { HomeResolverService } from './home/home.resolver.service';
 import { DetalheNoticiasComponent } from './noticias/detalhe-noticias/detalhe-noticias.component';
 import { EventoComponent } from './evento/evento.component';
 import { DetalhesComponent } from './guia-comercial/detalhes/detalhes.component';
@@ -13,7 +14,7 @@ import { Routes, RouterModule, Resolve } from '@angular/router';
 import { NoticiaResolverService } from './noticias/detalhe-noticias/noticia-resolver.service';
 
 const routes: Routes = [
-  { path : '', component : HomeComponent },
+  { path : '', component : HomeComponent, resolve : { data : HomeResolverService } },
   { path : 'quem-somos', component : QuemSomosComponent },
   { path : 'noticias/:url', component : DetalheNoticiasComponent, resolve : { data : NoticiaResolverService } },
   { path : 'noticias', component : NoticiasComponent },

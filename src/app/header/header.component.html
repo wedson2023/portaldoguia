@@ -5,7 +5,7 @@
           <li>
               <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : 'segmento', cidade : 'cidade', categoria : 1 }">Guia Médico
                   <div>
-                    <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : 'segmento', cidade : 'cidade', categoria : 'categoria' }" *ngFor="let segmento of registros?.guiaMedico">{{ segmento.nome }}</a>
+                    <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : segmento.id, cidade : 'cidade', categoria : 'categoria' }" *ngFor="let segmento of registros?.guiaMedico">{{ segmento.nome }}</a>
                   </div>            
               </a>
           </li>
@@ -56,7 +56,7 @@
           <input type="search" placeholder="Ex.: produtos, serviços, empresas">
       </label>
       <label class="form-cidade">
-          <input [(ngModel)]="cidade" name="cidade" (keyup.enter)="buscaCidade($event, cidade)" type="search" placeholder="Ex.: cidade">
+          <input [(ngModel)]="cidade" name="cidade" (keyup.enter)="buscaCidade(cidade)" type="search" placeholder="Ex.: cidade">
           <button>BUSCAR</button>
       </label>        
   </div>

@@ -22,6 +22,7 @@ import { AnuncieComponent } from './anuncie/anuncie.component';
 import { DetalhesComponent } from './guia-comercial/detalhes/detalhes.component';
 import { EventoComponent } from './evento/evento.component';
 import { DetalheNoticiasComponent } from './noticias/detalhe-noticias/detalhe-noticias.component';
+import { HomeResolverService } from './home/home.resolver.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { DetalheNoticiasComponent } from './noticias/detalhe-noticias/detalhe-no
     HttpClientModule,
     FormsModule
   ],
-  providers: [ HttpService, NoticiaResolverService ],
+  providers: [ HttpService, NoticiaResolverService, HomeResolverService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
