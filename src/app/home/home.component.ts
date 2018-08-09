@@ -12,13 +12,14 @@ declare var $ :any;
 })
 export class HomeComponent implements OnInit, AfterContentInit {
 
-  registros;
+  registros:any;
   constructor(
     private progresso: NgProgressService,
     private http: HttpService,
     private route: ActivatedRoute
   ) {    
     this.registros = this.route.snapshot.data.data.resposta;
+    console.log(this.registros);
     this.progresso.start();
   }
 

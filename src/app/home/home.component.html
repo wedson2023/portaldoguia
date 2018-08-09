@@ -221,7 +221,7 @@
             <img class="icon" src="./assets/imagens/icon-twitter.png" >
           </strong>
         </div>
-        <div *ngIf="registros?.gastronomia[3]">
+        <div>
           <h3>{{ registros?.gastronomia[3].nome }}</h3>
           <img class="banner" [src]="registros?.gastronomia[3].capa" >
           <p>
@@ -234,20 +234,7 @@
             <img class="icon" src="./assets/imagens/icon-twitter.png" >
           </strong>
         </div>
-        <div *ngIf="registros?.gastronomia[3]">
-          <h3>{{ registros?.gastronomia[3].nome }}</h3>
-          <img class="banner" [src]="registros?.gastronomia[3].capa" >
-          <p>
-          {{ registros?.gastronomia[3].endereco }}
-          </p>
-          <strong>
-            Saiba mais | compartilhe: 
-            <img class="icon" src="./assets/imagens/icon-facebook.png" >
-            <img class="icon" src="./assets/imagens/icon-linkedin.png" >
-            <img class="icon" src="./assets/imagens/icon-twitter.png" >
-          </strong>
-        </div>
-        <div *ngIf="registros?.gastronomia[4]">
+        <div>
           <h3>{{ registros?.gastronomia[4].nome }}</h3>
           <img class="banner" [src]="registros?.gastronomia[4].capa" >
           <p>
@@ -260,7 +247,7 @@
             <img class="icon" src="./assets/imagens/icon-twitter.png" >
           </strong>
         </div>
-        <div *ngIf="registros?.gastronomia[5]">
+        <div>
           <h3>{{ registros?.gastronomia[5].nome }}</h3>
           <img class="banner" [src]="registros?.gastronomia[5].capa" >
           <p>
@@ -282,65 +269,89 @@
     </header>
     <div class="slide-slick-6">
       <div>
-        <a href="javascript:void(0)">
-          <img src="./assets/imagens/guia-comercial/limpeza-de-pele-a-laser.jpg" >
+        <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.empresasDestaques[0].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
+          <img [src]="( registros?.empresasDestaques[0].capa || '' )" >
         </a>
-        <span>Estética e Massoterapia</span>
-        <strong>Vita Bella Espaço de Estética e Bem Estar</strong>
+        <span>{{ registros?.empresasDestaques[0].nome }}</span>
+        <strong>{{ registros?.empresasDestaques[0].endereco }}</strong>
       </div>
       <div>
-        <a href="javascript:void(0)">
-          <img src="./assets/imagens/guia-comercial/limpeza-de-pele-a-laser.jpg" >
+        <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.empresasDestaques[1].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
+          <img [src]="( registros?.empresasDestaques[1].capa || '' )" >
         </a>
-        <span>Estética e Massoterapia</span>
-        <strong>Vita Bella Espaço de Estética e Bem Estar</strong>
+        <span>{{ registros?.empresasDestaques[1].nome }}</span>
+        <strong>{{ registros?.empresasDestaques[1].endereco }}</strong>
       </div>
       <div>
-        <a href="javascript:void(0)">
-          <img src="./assets/imagens/guia-comercial/limpeza-de-pele-a-laser.jpg" >
+        <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.empresasDestaques[2].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
+          <img [src]="( registros?.empresasDestaques[2].capa || '' )" >
         </a>
-        <span>Estética e Massoterapia</span>
-        <strong>Vita Bella Espaço de Estética e Bem Estar</strong>
+        <span>{{ registros?.empresasDestaques[2].nome }}</span>
+        <strong>{{ registros?.empresasDestaques[2].endereco }}</strong>
       </div>
       <div>
-        <a href="javascript:void(0)">
-          <img src="./assets/imagens/guia-comercial/limpeza-de-pele-a-laser.jpg" >
+        <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.empresasDestaques[3].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
+          <img [src]="( registros?.empresasDestaques[3].capa || '' )" >
         </a>
-        <span>Estética e Massoterapia</span>
-        <strong>Vita Bella Espaço de Estética e Bem Estar</strong>
+        <span>{{ registros?.empresasDestaques[3].nome }}</span>
+        <strong>{{ registros?.empresasDestaques[3].endereco }}</strong>
       </div>
       <div>
-        <a href="javascript:void(0)">
-          <img src="./assets/imagens/guia-comercial/limpeza-de-pele-a-laser.jpg" >
+        <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.empresasDestaques[4].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
+          <img [src]="( registros?.empresasDestaques[4].capa || '' )" >
         </a>
-        <span>Estética e Massoterapia</span>
-        <strong>Vita Bella Espaço de Estética e Bem Estar</strong>
+        <span>{{ registros?.empresasDestaques[4].nome }}</span>
+        <strong>{{ registros?.empresasDestaques[4].endereco }}</strong>
       </div>
-
       <div>
-        <a href="javascript:void(0)">
-          <img src="./assets/imagens/guia-comercial/limpeza-de-pele-a-laser.jpg" >
+        <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.empresasDestaques[5].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
+          <img [src]="( registros?.empresasDestaques[5].capa || '' )" >
         </a>
-        <span>Estética e Massoterapia</span>
-        <strong>Vita Bella Espaço de Estética e Bem Estar</strong>
+        <span>{{ registros?.empresasDestaques[5].nome }}</span>
+        <strong>{{ registros?.empresasDestaques[5].endereco }}</strong>
       </div>
-
       <div>
-        <a href="javascript:void(0)">
-          <img src="./assets/imagens/guia-comercial/limpeza-de-pele-a-laser.jpg" >
+        <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.empresasDestaques[6].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
+          <img [src]="( registros?.empresasDestaques[6].capa || '' )" >
         </a>
-        <span>Estética e Massoterapia</span>
-        <strong>Vita Bella Espaço de Estética e Bem Estar</strong>
+        <span>{{ registros?.empresasDestaques[6].nome }}</span>
+        <strong>{{ registros?.empresasDestaques[6].endereco }}</strong>
       </div>
-
       <div>
-        <a href="javascript:void(0)">
-          <img src="./assets/imagens/guia-comercial/limpeza-de-pele-a-laser.jpg" >
+        <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.empresasDestaques[7].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
+          <img [src]="( registros?.empresasDestaques[7].capa || '' )" >
         </a>
-        <span>Estética e Massoterapia</span>
-        <strong>Vita Bella Espaço de Estética e Bem Estar</strong>
+        <span>{{ registros?.empresasDestaques[7].nome }}</span>
+        <strong>{{ registros?.empresasDestaques[7].endereco }}</strong>
       </div>
-
+      <div>
+        <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.empresasDestaques[8].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
+          <img [src]="( registros?.empresasDestaques[8].capa || '' )" >
+        </a>
+        <span>{{ registros?.empresasDestaques[8].nome }}</span>
+        <strong>{{ registros?.empresasDestaques[8].endereco }}</strong>
+      </div>
+      <div>
+        <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.empresasDestaques[9].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
+          <img [src]="( registros?.empresasDestaques[9].capa || '' )" >
+        </a>
+        <span>{{ registros?.empresasDestaques[9].nome }}</span>
+        <strong>{{ registros?.empresasDestaques[9].endereco }}</strong>
+      </div>
+      <div>
+        <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.empresasDestaques[10].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
+          <img [src]="( registros?.empresasDestaques[10].capa || '' )" >
+        </a>
+        <span>{{ registros?.empresasDestaques[10].nome }}</span>
+        <strong>{{ registros?.empresasDestaques[10].endereco }}</strong>
+      </div>
+      <div>
+        <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.empresasDestaques[11].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
+          <img [src]="( registros?.empresasDestaques[11].capa || '' )" >
+        </a>
+        <span>{{ registros?.empresasDestaques[11].nome }}</span>
+        <strong>{{ registros?.empresasDestaques[11].endereco }}</strong>
+      </div>
     </div>
   </section> 
   <section class="bloco-8">
