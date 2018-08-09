@@ -3,7 +3,7 @@
       <p>Araguiana - TO, Terça-feira<span>, 22 de janeiro de 2018</span></p>
       <ul>
           <li>
-              <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : 'segmento', cidade : 'cidade', categoria : 1 }">Guia Médico
+              <a>Guia Médico
                   <div>
                     <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : segmento.id, cidade : 'cidade', categoria : 'categoria' }" *ngFor="let segmento of registros?.guiaMedico">{{ segmento.nome }}</a>
                   </div>            
@@ -30,18 +30,18 @@
       <a routerLink="/quem-somos">QUEM SOMOS</a>
       <a routerLink="/noticias">NOTÍCIAS</a>
       <a routerLink="/guia-comercial">GUIA COMERCIAL</a>
-      <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : 'segmento', cidade : 'cidade', categoria : 2 }" class="sub-item"><span>DISK DELIVERY <img src="./assets/imagens/icon/icons8-chevron-right-filled-32.png" class="arrow" /></span>
+      <a class="sub-item"><span>DISK DELIVERY <img src="./assets/imagens/icon/icons8-chevron-right-filled-32.png" class="arrow" /></span>
           <div>
               <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : segmento.id, cidade : 'cidade', categoria : 'categoria' }" *ngFor="let segmento of registros?.diskDelivery">- {{ segmento.nome }}</a>
           </div>
       </a>
       <a routerLink="/anuncie">ANUNCIE</a>
-      <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : 'segmento', cidade : 'cidade', categoria : 3 }" class="sub-item"><span>ONDE HOSPEDAR <img src="./assets/imagens/icon/icons8-chevron-right-filled-32.png" class="arrow" /></span>
+      <a class="sub-item"><span>ONDE HOSPEDAR <img src="./assets/imagens/icon/icons8-chevron-right-filled-32.png" class="arrow" /></span>
           <div>
             <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : segmento.id, cidade : 'cidade', categoria : 'categoria' }" *ngFor="let segmento of registros?.ondeHospedar">- {{ segmento.nome }}</a>
           </div>
       </a>
-      <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : 'segmento', cidade : 'cidade', categoria : 4 }" class="sub-item"><span>ONDE COMER <img src="./assets/imagens/icon/icons8-chevron-right-filled-32.png" class="arrow" /></span>
+      <a class="sub-item"><span>ONDE COMER <img src="./assets/imagens/icon/icons8-chevron-right-filled-32.png" class="arrow" /></span>
           <div>
             <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : segmento.id, cidade : 'cidade', categoria : 'categoria' }" *ngFor="let segmento of registros?.ondeComer">- {{ segmento.nome }}</a>
           </div>
