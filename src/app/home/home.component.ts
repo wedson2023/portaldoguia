@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit, AfterContentInit {
     $('a').not('.fixed').on('click', function(){
       $('html, body').animate({
         scrollTop: 0
-      }, 500);
+      }, 1);
     })
 
     let sl3 = window.innerWidth >= 1024 ? 3 : 1;

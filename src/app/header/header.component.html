@@ -9,10 +9,10 @@
                   </div>            
               </a>
           </li>
-          <li><a href="javascript:void(0)">Eventos</a></li>
-          <li><a href="javascript:void(0)">Agência de Turismo</a></li>
+          <li><a routerLink="/agenda-de-eventos">Eventos</a></li>
+          <li><a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : 36, cidade : 'cidade', categoria : 'categoria' }">Agência de Turismo</a></li>
           <li><a href="javascript:void(0)">Vídeo</a></li>
-          <li><a href="javascript:void(0)">Locadora de carros</a></li>
+          <li><a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : 37, cidade : 'cidade', categoria : 'categoria' }">Locadora de carros</a></li>
           <li><a href="javascript:void(0)">Seja nosso parceiro</a></li>
       </ul>
   </div>
@@ -26,7 +26,7 @@
 <nav class="menu">
     <img class="logo" src="./assets/imagens/logo.png" >
   <div>
-      <a routerLink="/" >HOME</a>
+      <a routerLink="/">HOME</a>
       <a routerLink="/quem-somos">QUEM SOMOS</a>
       <a routerLink="/noticias">NOTÍCIAS</a>
       <a routerLink="/guia-comercial">GUIA COMERCIAL</a>
@@ -57,7 +57,7 @@
       </label>
       <label class="form-cidade">
           <input [(ngModel)]="cidade" name="cidade" (keyup.enter)="buscaCidade(cidade)" type="search" placeholder="Ex.: cidade">
-          <button>BUSCAR</button>
+          <button (click)="buscaCidade(cidade)">BUSCAR</button>
       </label>        
   </div>
 </section>

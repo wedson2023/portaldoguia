@@ -2,7 +2,7 @@
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div *ngFor="let imagem of imagens; let i = index" [ngClass]="i == 0 ? 'active' : null" class="carousel-item">
-        <img class="d-block w-100" [src]="imagem.imagem" alt="First slide">
+        <img class="d-block w-100" [src]="( imagem.imagem || '' )" alt="First slide">
       </div>
     </div>
   </div>

@@ -47,7 +47,7 @@ export class GuiaComercialComponent {
 
         $('html, body').animate({
           scrollTop: 0
-        }, 300);
+        }, 1);
 
         this.progresso.done();
       });
