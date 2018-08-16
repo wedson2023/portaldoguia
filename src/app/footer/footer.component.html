@@ -2,32 +2,20 @@
   <div class="noticias">
       <header><h3>Últimas notícias</h3></header>
       <ul>
-          <li>
-              <strong>22h24</strong>
-              <a href="javascript:void(0)">Suplente de vereador em três lagoas é cotado...</a>
-          </li>
-          <li>
-              <strong>22h24</strong>
-              <a href="javascript:void(0)">Suplente de vereador em três lagoas é cotado...</a>
-          </li>
-          <li>
-              <strong>22h24</strong>
-              <a href="javascript:void(0)">Suplente de vereador em três lagoas é cotado...</a>
-          </li>
-          <li>
-              <strong>22h24</strong>
-              <a href="javascript:void(0)">Suplente de vereador em três lagoas é cotado...</a>
+          <li *ngFor="let noticia of g1">
+              <strong>{{ noticia.pubDate }}</strong>
+              <a target="_blank" [href]="noticia.link">{{ noticia.title }}</a>
           </li>
       </ul>
       <div>
-          <a href="javascript:void(0)">Ver todas</a>            
+          <a href="javascript:void(0)">Ver todas</a>
       </div>
   </div>
   <div class="agenda">
       <header>
-          <span>AGENDA DE <strong>EVENTOS</strong></span> 
+          <span>AGENDA DE <strong>EVENTOS</strong></span>
           <a class="agenda" routerLink="/agenda-de-eventos">
-            <img src="./assets/imagens/icons8-soma-26.png">          
+            <img src="./assets/imagens/icons8-soma-26.png">
           </a>
       </header>
       <section>
@@ -42,7 +30,7 @@
               <div class="link">
                   <a href="javascript:void(0)">Informações</a> |
                   <a href="javascript:void(0)">Ver Cartaz</a> |
-                  <a href="javascript:void(0)">Site do Evento</a> 
+                  <a href="javascript:void(0)">Site do Evento</a>
               </div>
           </div>
       </section>
@@ -58,7 +46,7 @@
               <div class="link">
                   <a href="javascript:void(0)">Informações</a> |
                   <a href="javascript:void(0)">Ver Cartaz</a> |
-                  <a href="javascript:void(0)">Site do Evento</a> 
+                  <a href="javascript:void(0)">Site do Evento</a>
               </div>
           </div>
       </section>
@@ -74,7 +62,7 @@
               <div class="link">
                   <a href="javascript:void(0)">Informações</a> |
                   <a href="javascript:void(0)">Ver Cartaz</a> |
-                  <a href="javascript:void(0)">Site do Evento</a> 
+                  <a href="javascript:void(0)">Site do Evento</a>
               </div>
           </div>
       </section>
@@ -113,7 +101,7 @@
           <h2>ENCONTRAR SUA EMPRESA</h2>
           <button>Cadastre sua empresa agora</button>
       </div>
-  </section>   
+  </section>
 </footer>
 <section>
   <div class="direitos">
@@ -123,4 +111,4 @@
       <h3>Wedson Webdesigner</h3>
   </div>
   <div style="clear: both"></div>
-</section> 
+</section>
