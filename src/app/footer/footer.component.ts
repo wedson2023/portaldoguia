@@ -12,6 +12,7 @@ export class FooterComponent implements OnInit {
   @Input('imagens') imagens;
 
   private g1;
+  private eventos;
   constructor(
     private http: HttpService,
     private router: Router
@@ -19,13 +20,15 @@ export class FooterComponent implements OnInit {
     this.http.ApiGet('page/get-footer').subscribe((response:any) => {
       let noticia = [];
 
-      for(let x in response.resposta.item)
-      {
-        let data = new Date(response.resposta.item[x].pubDate);
+      this.eventos = response.resposta.eventos;
 
-        response.resposta.item[x].pubDate = data.getHours() + 'h' + data.getMinutes();
-        response.resposta.item[x].title = response.resposta.item[x].title.substr(0, 50);
-        noticia.push(response.resposta.item[x]);
+      for(let x in response.resposta.g1.item)
+      {
+        let data = new Date(response.resposta.g1.item[x].pubDate);
+
+        response.resposta.g1.item[x].pubDate = data.getHours() + 'h' + data.getMinutes();
+        response.resposta.g1.item[x].title = response.resposta.g1.item[x].title.substr(0, 50);
+        noticia.push(response.resposta.g1.item[x]);
 
         if(parseInt(x) >= 3)
         {

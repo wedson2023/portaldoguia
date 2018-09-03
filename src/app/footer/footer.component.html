@@ -18,51 +18,19 @@
             <img src="./assets/imagens/icons8-soma-26.png">
           </a>
       </header>
-      <section>
+      <section *ngFor="let evento of eventos">
           <div class="data">
-              <strong>06/05</strong>
-              <span>SÁBADO</span>
+              <strong>{{ evento.mes }}</strong>
+              <span>{{ evento.dia }}</span>
           </div>
           <div class="informacao">
-              <h3>SHOWS E BALADAS</h3>
-              <strong>Felipe e Matheus</strong>
-              <span>Local: 23h - Expoara Porto Franco/MA</span>
+              <h3>{{ evento.categoria }}</h3>
+              <strong>{{ evento.nome }}</strong>
+              <span>{{ evento.hora + ' - ' + evento.local }}</span>
               <div class="link">
                   <a href="javascript:void(0)">Informações</a> |
                   <a href="javascript:void(0)">Ver Cartaz</a> |
-                  <a href="javascript:void(0)">Site do Evento</a>
-              </div>
-          </div>
-      </section>
-      <section>
-          <div class="data">
-              <strong>06/05</strong>
-              <span>SÁBADO</span>
-          </div>
-          <div class="informacao">
-              <h3>SHOWS E BALADAS</h3>
-              <strong>Felipe e Matheus</strong>
-              <span>Local: 23h - Expoara Porto Franco/MA</span>
-              <div class="link">
-                  <a href="javascript:void(0)">Informações</a> |
-                  <a href="javascript:void(0)">Ver Cartaz</a> |
-                  <a href="javascript:void(0)">Site do Evento</a>
-              </div>
-          </div>
-      </section>
-      <section>
-          <div class="data">
-              <strong>06/05</strong>
-              <span>SÁBADO</span>
-          </div>
-          <div class="informacao">
-              <h3>SHOWS E BALADAS</h3>
-              <strong>Felipe e Matheus</strong>
-              <span>Local: 23h - Expoara Porto Franco/MA</span>
-              <div class="link">
-                  <a href="javascript:void(0)">Informações</a> |
-                  <a href="javascript:void(0)">Ver Cartaz</a> |
-                  <a href="javascript:void(0)">Site do Evento</a>
+                  <a target="_blank" [routerLink]="evento.site" href="javascript:void(0)">Site do Evento</a>
               </div>
           </div>
       </section>

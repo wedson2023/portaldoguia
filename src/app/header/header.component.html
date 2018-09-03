@@ -1,12 +1,12 @@
-<section class="topo"> 
-  <div>  
+<section class="topo">
+  <div>
       <p>Araguiana - TO, Terça-feira<span>, 22 de janeiro de 2018</span></p>
       <ul>
           <li>
               <a>Guia Médico
                   <div>
                     <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : segmento.id, cidade : 'cidade', categoria : 'categoria' }" *ngFor="let segmento of registros?.guiaMedico">{{ segmento.nome }}</a>
-                  </div>            
+                  </div>
               </a>
           </li>
           <li><a routerLink="/agenda-de-eventos">Eventos</a></li>
@@ -19,7 +19,7 @@
 </section>
 <section class="banner">
   <img class="logo" src="./assets/imagens/logo.jpg" >
-  <div class="slide_600x100"><app-banner-slide [imagens]="imagens?._600x100"></app-banner-slide></div>    
+  <div class="slide_600x100"><app-banner-slide [imagens]="imagens?._600x100"></app-banner-slide></div>
   <div class="slide_300x100"><app-banner-slide [imagens]="imagens?._300x100"></app-banner-slide></div>
   <img src="./assets/imagens/icon/menu.png" class="menu" />
 </section>
@@ -53,11 +53,11 @@
   <div>
       <label class="form-servico">
           <p>Faça sua busca por:<br>Empresa, Ramo, Telefone ou Serviços.</p>
-          <input type="search" placeholder="Ex.: produtos, serviços, empresas">
+          <input (keyup.enter)="buscaSegmento(segmento)" [(ngModel)]="segmento" type="search" placeholder="Ex.: produtos, serviços, empresas">
       </label>
       <label class="form-cidade">
           <input [(ngModel)]="cidade" name="cidade" (keyup.enter)="buscaCidade(cidade)" type="search" placeholder="Ex.: cidade">
           <button (click)="buscaCidade(cidade)">BUSCAR</button>
-      </label>        
+      </label>
   </div>
 </section>

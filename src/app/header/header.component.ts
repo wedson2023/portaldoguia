@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
 
   @Input('imagens') imagens;
   cidade:any;
+  segmento:any;
   registros;
   constructor(
     private http: HttpService,
@@ -20,10 +21,23 @@ export class HeaderComponent implements OnInit {
     this.http.ApiGet('page/get-header').subscribe((response:any) => {
       this.registros = response.resposta;
     });
-  }  
+  }
 
   buscaCidade(cidade){
     this.router.navigate(['guia-comercial'], { queryParams : { pagina : 1, segmento : 'segmento', cidade : this.cidade, categoria : 'categoria'  } })
+  }
+
+  buscaSegmento(segmento){
+    this.http.ApiGet('segmentos/' + this.segmento).subscribe((response:any) => {
+      if(response.resposta)
+      {
+        this.router.navigate(['guia-comercial'], { queryParams : { pagina : 1, segmento : response.resposta.id, cidade : 'cidade', categoria : 'categoria'  } })
+      }
+      else
+      {
+        alert('Segmento não encontrado');
+      }
+    });
   }
 
   ngOnInit(){
@@ -34,7 +48,7 @@ export class HeaderComponent implements OnInit {
 
     $('section.topo a').hover(function(){
       $(this).children('div').slideToggle();
-    }) 
+    })
 
     $('section.banner img.menu, nav.menu a').not('a.sub-item').on('click', function(){
       var ativo = $('nav.menu').css('left');
