@@ -6,41 +6,43 @@
       <h3>100% gratuito</h3>
       <h4>Cadastre sua empresa aqui!</h4>
     </div>
-    <form>
+    <form (ngSubmit)="cadastrar(dados)">
       <label>
         <span>Categoria:</span>
-        <select>
-          <option value="">Serviços</option>
+        <select (change)="segmento(categoria.value)" name="categoria_id" #categoria>
+          <option value="">Selecione uma categoria</option>
+          <option *ngFor="let categoria of categorias" [value]="categoria.id">{{ categoria.nome }}</option>
         </select>
       </label>
       <label>
-        <span>Subcategoria:</span>
-        <select>
-          <option value="">Assessoria e Consultoria</option>
+        <span>Segmentos:</span>
+        <select [disabled]="!categoria.value" name="segmento_id" [(ngModel)]="dados.segmento_id">
+          <option value="">Selecione um segmento</option>
+          <option *ngFor="let segmento of segmentos" [value]="segmento.id">{{ segmento.nome }}</option>
         </select>
       </label>
       <label>
         <span>Nome da Empresa:</span>
-        <input type="text">
+        <input [(ngModel)]="dados.nome" name="nome" type="text">
       </label>
       <div>
         <label>
           <span>Endereço da Empresa:</span>
-          <input type="text">
+          <input [(ngModel)]="dados.endereco" name="endereco"  type="text">
         </label>
         <label>
           <span>Bairro:</span>
-          <input type="text">
+          <input [(ngModel)]="dados.bairro" name="bairro"  type="text">
         </label>
       </div>
       <div>
         <label>
           <span>Cidade:</span>
-          <input type="text">
+          <input [(ngModel)]="dados.cidade" name="cidade"  type="text">
         </label>
         <label>
           <span>Estado:</span>
-          <select>
+          <select [(ngModel)]="dados.estado" name="estado" >
             <option value="">Estado</option>
             <option value="AC">Acre</option>
             <option value="AL">Alagoas</option>
@@ -74,29 +76,29 @@
       </div>
       <label>
         <span>Telefone:</span>
-        <input type="text">
+        <input [(ngModel)]="dados.telefones" name="telefones"  type="text">
       </label>
       <label>
         <span>Email:</span>
-        <input type="text">
+        <input [(ngModel)]="dados.contato.email" name="contato"  type="text">
       </label>
       <div>
         <span class="termos">
-          <input type="checkbox" />
+          <input [(ngModel)]="termos" name="termos" type="checkbox" />
           <span>Li e concordo com os <strong>termos e condições de uso</strong></span>
         </span>
-        <input type="submit" value="Enviar">
+        <input [disabled]="!termos" type="submit" value="Enviar">
       </div>
     </form>
     <div class="contato">
       <p>plano <strong>SUPER DESTAQUE</strong> sua empresa terá uma página no portaldoguia</p>
-      <p>Mais informações <a routerLink="/contato">clique aqui</a> ou ligue (99) 98149-7114 99207-0046 WhatsApp</p>      
+      <p>Mais informações <a routerLink="/contato">clique aqui</a> ou ligue (99) 98149-7114 99207-0046 WhatsApp</p>
     </div>
   </section>
   <section class="segmentos">
       <div>
         <header>
-          <h3>Segmentos</h3> 
+          <h3>Segmentos</h3>
         </header>
         <a href="javascript:void(0)">Academia</a>
         <a href="javascript:void(0)">Açai</a>
