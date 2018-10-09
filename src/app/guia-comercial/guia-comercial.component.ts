@@ -19,7 +19,7 @@ export class GuiaComercialComponent {
   cidade;
   categoria;
 
-  constructor(private route: ActivatedRoute, private progresso: NgProgressService, private http: HttpService) { 
+  constructor(private route: ActivatedRoute, private progresso: NgProgressService, private http: HttpService) {
     this.http.ApiGet('guia-comercial/page/quantidade').subscribe((response:any) => {
       this.quantidade = response;
     });
@@ -32,7 +32,7 @@ export class GuiaComercialComponent {
   }
 
   navegar(){
-    this.progresso.start();    
+    this.progresso.start();
 
     this.route.queryParams.subscribe((query:any) => {
       this.http.ApiGet('guia-comercial/page/' + ( query['pagina'] || 1 ) + '/' + ( query['segmento'] || 'segmento' ) + '/' + ( query['cidade'] || 'cidade' ) + '/' + ( query['categoria'] || 'categoria')).subscribe((response:any) => {

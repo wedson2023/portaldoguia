@@ -6,6 +6,8 @@ section.bloco-1
     div
         display: flex
         justify-content: space-between
+        a
+          display: block
         article
             width: 39%
             text-align: center
@@ -59,9 +61,9 @@ section.bloco-1
                 padding: 5px
                 font-size: 0.8em
                 outline: none
-                margin-bottom: 5px  
+                margin-bottom: 5px
             input.campos
-                border: #f1f1f1 solid thin         
+                border: #f1f1f1 solid thin
             input[type=submit]
                 background: $laranja
                 color: #ffffff
@@ -91,7 +93,7 @@ section.bloco-1
                 background: red
 
 section.bloco-2
-    margin: 15px 0 
+    margin: 15px 0
     display: flex
     justify-content: space-between
     .sobre
@@ -120,7 +122,7 @@ section.bloco-2
         iframe:first-child
             margin-bottom: 15px
 
-section.galeria    
+section.galeria
     header
         width: 100%
         margin-bottom: 10px
@@ -129,7 +131,7 @@ section.galeria
         display: flex
         justify-content: flex-start
         align-items: center
-        img 
+        img
             margin-right: 5px
             width: 15px
             height: 15px
@@ -154,13 +156,13 @@ section.galeria
         font-size: 0.9em
         color: #666666
         margin: 15px 0
-    
-@media screen and (max-width:1024px) 
+
+@media screen and (max-width:1024px)
     section.bloco-1
-        background: $gray 
-        margin: 0 10px  
+        background: $gray
+        margin: 0 10px
         div
-            flex-direction: column                    
+            flex-direction: column
             article
                 width: 100%
                 text-align: center
@@ -191,7 +193,7 @@ section.galeria
                 input
                     padding: 10px
                 input.campos
-                    border: #f1f1f1 solid thin         
+                    border: #f1f1f1 solid thin
                 input[type=submit]
                     padding: 10px
                 textarea
@@ -199,10 +201,10 @@ section.galeria
         div.paginas
             a
                 width: 100%
-    
+
     section.bloco-2
-        margin: 15px 10px 
-        flex-direction: column 
+        margin: 15px 10px
+        flex-direction: column
         .sobre
             width: 100%
 
@@ -211,8 +213,8 @@ section.galeria
             iframe:first-child
                 margin-bottom: 15px
 
-    section.galeria   
-        margin: 0 10px 
+    section.galeria
+        margin: 0 10px
         section
             display: block
             div.grande

@@ -1,32 +1,30 @@
 <section class="bloco-1">
-  <div>
+  <div class="empresa">
     <article>
-      <h3>Maranata Espetos</h3>
-      <img src="./assets/imagens/guia-comercial/maranata-espetos.jpg" />
+      <h3>{{ empresa?.nome }}</h3>
+      <img [src]="( empresa?.capa || 'http://protaldoguia.com.br/uploads/guiaComercial/guia.jpg' )" />
     </article>
     <ul>
       <li><h3>Mais informações</h3></li>
       <li>
-        <strong>Maranata espetos</strong>
-        <span>Av. Florianópolis, 492 A setor bandeirante - Araguaina - TO</span>
+        <strong>{{ empresa?.nome }}</strong>
+        <span>{{ empresa?.endereco }}</span>
       </li>
-      <li>
+      <li *ngIf="empresa?.telefones">
         <strong>Telefone</strong>
-        <span>(35) 3412 - 4050 / 99112 - 0303 / 98123 - 0214</span>
+        <span>{{ empresa?.telefones }}</span>
       </li>
-      <li>
+      <li *ngIf="empresa?.horario">
         <strong>Horário de Funcionamento</strong>
-        <span>De segunda a sexta de 13 as 23 horas</span>
+        <span>{{ empresa?.horario }}</span>
       </li>
-      <li>
+      <li *ngIf="empresa?.formas_pagamento">
         <strong>Formas de pagamentos</strong>
-        <span>Dinheiro, cartão de crédito e débeto</span>
+        <span>{{ empresa?.formas_pagamento }}</span>
       </li>
-      <li>
+      <li *ngIf="empresa?.contato">
         <strong>Contato na Web</strong>
-        <a href="javascript:void(0)">portaldoguia@hotmail.com</a>
-        <a href="javascript:void(0)">www.protaldoguia.com.br</a>
-        <a href="javascript:void(0)">www.facebook.com/maranataespetos</a>
+        <a target="_blank" *ngFor="let contato of empresa?.contato" [href]="contato.url">{{ contato.url }}</a>
       </li>
     </ul>
     <form action="">
@@ -40,19 +38,13 @@
     </form>
   </div>
   <div class="paginas">
-    <a href="javascript:void(0)">CONFIRA O <strong>CARDÁPIO</strong></a>
-    <a href="javascript:void(0)">MÍDIA KIT</a>
-    <a href="javascript:void(0)">DESTINO E HORÁRIOS</a>
-    <a href="javascript:void(0)">R$ 34.500,00</a>
-    <a href="javascript:void(0)">RELAÇÃO MOTO TAXÍ</a>
-    <a href="javascript:void(0)">MAIS DETALHES</a>
-    <a href="javascript:void(0)">ITINERANTE E HORÁRIOS</a>
-    <a href="javascript:void(0)">PROMOÇÃO</a>
+    <a *ngFor="let botao of empresa?.botao" [href]="( botao.arquivo ? 'http://protaldoguia.com.br/uploads/botoes/' + botao.arquivo : 'guia-comercial/' + empresa_id )">{{ botao.nome }}</a>
   </div>
 </section>
 <section class="bloco-2">
   <div class="sobre">
-    <h3>SOBRE - <span>Maranata Fábrica de Espetos</span></h3>
+    {{ empresa?.template }}
+    <!-- <h3>SOBRE - <span>Maranata Fábrica de Espetos</span></h3>
     <p>Há mais de 3 anos no mercado Maranata Fabrica de Espetos, produzindo produtos sempre fresquinhos para seu churrasco.</p>
     <h4>Vendas no atacado e varejo, mínimo de 5 unidades</h4>
     <ul>
@@ -72,31 +64,24 @@
     </ul>
     <h4>Faça seu pedido e entregamos para você, entrega à combinar.</h4>
     <h4>Aceitamos apenas cartões de débito.</h4>
-    <h4>Venha conferir!</h4>
+    <h4>Venha conferir!</h4> -->
   </div>
   <div class="mapa-video">
     <iframe id="video" width="100%" height="220" src="https://www.youtube.com/embed/srd_k-O-Yc0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d63334.72741302438!2d-48.2398467226775!3d-7.192771970543947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m5!1s0x92d90dde5d8c4ffb%3A0x4a30e815e64dc4fc!2sAragua%C3%ADna%2C+TO%2C+65907-230!3m2!1d-7.1927733!2d-48.204826999999995!4m0!5e0!3m2!1spt-BR!2sbr!4v1528996499690" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
   </div>
 </section>
-<section class="galeria">
+<section class="galeria" *ngIf="empresa?.galeria">
   <header>
     <img src="../../../assets/imagens/icon/galeria.png" />
     Galeria de Fotos
   </header>
   <section>
     <div class="grande">
-      <img src="./assets/imagens/guia-comercial/galeria/01.jpeg" />
+      <img [src]="empresa?.galeria[0].nome" />
     </div>
     <div class="miniatura">
-        <img src="./assets/imagens/guia-comercial/galeria/01.jpeg" />
-        <img src="./assets/imagens/guia-comercial/galeria/02.jpeg" />
-        <img src="./assets/imagens/guia-comercial/galeria/03.jpeg" />
-        <img src="./assets/imagens/guia-comercial/galeria/04.jpeg" />
-        <img src="./assets/imagens/guia-comercial/galeria/05.jpeg" />
-        <img src="./assets/imagens/guia-comercial/galeria/06.jpeg" />
-        <img src="./assets/imagens/guia-comercial/galeria/07.jpeg" />
-        <img src="./assets/imagens/guia-comercial/galeria/08.jpeg" />
+        <img *ngFor="let galeria of empresa?.galeria" [src]="galeria.nome" />
     </div>
   </section>
   <p>*<strong>ATENÇÃO:</strong> O ARAGUAINA ONLINE NÃO SE RESPONSABILIZA PELOS PRODUTOS E SERVIÇOS OFERECIDOS PELOS ANUNCIANTES.</p>
