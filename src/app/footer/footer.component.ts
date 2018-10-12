@@ -11,8 +11,8 @@ export class FooterComponent implements OnInit {
 
   @Input('imagens') imagens;
 
-  private g1;
-  private eventos;
+  public g1;
+  public eventos;
   constructor(
     private http: HttpService,
     private router: Router

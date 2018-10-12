@@ -9,7 +9,8 @@ import { HttpService } from '../http.service';
 })
 export class AnuncieComponent implements OnInit, AfterContentInit {
   categorias;
-  segmentos
+  segmentos;
+  termos;
   dados = {
     segmento_id : '',
     telefones : null,
@@ -17,6 +18,7 @@ export class AnuncieComponent implements OnInit, AfterContentInit {
     endereco : null,
     bairro : null,
     cidade : null,
+    estado : null,
     ativo : 0,
     destaque : 0,
     contato : {
@@ -48,6 +50,7 @@ export class AnuncieComponent implements OnInit, AfterContentInit {
           endereco : null,
           bairro : null,
           cidade : null,
+          estado : null,
           ativo : 0,
           destaque : 0,
           contato : {
