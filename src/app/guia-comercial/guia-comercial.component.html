@@ -1,7 +1,7 @@
-<div class="conteiner"> 
-  <section class="guia-comercial"> 
+<div class="conteiner">
+  <section class="guia-comercial">
     <!-- <router-outlet (quantidade)="onQuantidade($event)" class="paginas"></router-outlet> -->
-    <header>GUIA COMERCIAL <strong>TELEFONES</strong></header> 
+    <header>GUIA COMERCIAL <strong>TELEFONES</strong></header>
     <article *ngFor="let empresa of empresas">
       <div class="logo">
         <img [src]="empresa.capa" alt="">
@@ -14,7 +14,9 @@
         <p>{{ ( empresa.email?.url || '' ) }}</p>
         <p>{{ ( empresa.site?.url || '' ) }}</p>
       </div>
+
     </article>
+
     <nav>
       <!-- <a href="javascript:void(0)">Anterior</a>   -->
       <ul>
@@ -26,7 +28,7 @@
   <section class="segmentos">
     <div>
       <header>
-        <h3>Segmentos</h3> 
+        <h3>Segmentos</h3>
       </header>
       <a routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : segmento.id, cidade : cidade, categoria : categoria }" *ngFor="let segmento of segmentos">{{ segmento.nome }}</a>
     </div>

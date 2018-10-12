@@ -20,9 +20,9 @@ export class GuiaComercialComponent {
   categoria;
 
   constructor(private route: ActivatedRoute, private progresso: NgProgressService, private http: HttpService) {
-    this.http.ApiGet('guia-comercial/page/quantidade').subscribe((response:any) => {
-      this.quantidade = response;
-    });
+    // this.http.ApiGet('guia-comercial/page/quantidade').subscribe((response:any) => {
+    //   this.quantidade = response;
+    // });
 
     this.http.ApiGet('guia-comercial/page/segmentos').subscribe((response:any) => {
       this.segmentos = response.resposta;

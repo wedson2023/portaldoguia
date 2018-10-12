@@ -2,6 +2,7 @@ import { Component, OnInit, AfterContentInit } from '@angular/core';
 import { NgProgressService } from 'ng2-progressbar';
 import { HttpService } from '../http.service';
 import { Router, ActivatedRoute  } from '@angular/router';
+import {DomSanitizer} from '@angular/platform-browser';
 
 declare var $ :any;
 
@@ -12,14 +13,16 @@ declare var $ :any;
 })
 export class HomeComponent implements OnInit, AfterContentInit {
 
+  link;
   registros:any;
   constructor(
     private progresso: NgProgressService,
     private http: HttpService,
-    private route: ActivatedRoute
-  ) {    
+    private route: ActivatedRoute,
+    private sanitizer:DomSanitizer
+  ) {
     this.registros = this.route.snapshot.data.data.resposta;
-    console.log(this.registros);
+    this.link = this.sanitizer.bypassSecurityTrustResourceUrl(this.route.snapshot.data.data.resposta.videos.link);
     this.progresso.start();
   }
 
