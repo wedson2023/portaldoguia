@@ -182,7 +182,7 @@
         <img class="next" title="Avançar" src="./assets/imagens/icon/icons8-avancar-26.png" >
       </header>
       <div class="slide-slick-3">
-        <div>
+        <div routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.gastronomia[0].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
           <h3>{{ registros?.gastronomia[0].nome }}</h3>
           <img class="banner" [src]="registros?.gastronomia[0].capa" >
           <p>
@@ -195,7 +195,7 @@
             <img class="icon" src="./assets/imagens/icon-twitter.png" >
           </strong>
         </div>
-        <div>
+        <div routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.gastronomia[1].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
           <h3>{{ registros?.gastronomia[1].nome }}</h3>
           <img class="banner" [src]="registros?.gastronomia[1].capa" >
           <p>
@@ -208,7 +208,7 @@
             <img class="icon" src="./assets/imagens/icon-twitter.png" >
           </strong>
         </div>
-        <div>
+        <div routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.gastronomia[2].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
           <h3>{{ registros?.gastronomia[2].nome }}</h3>
           <img class="banner" [src]="registros?.gastronomia[2].capa" >
           <p>
@@ -221,7 +221,7 @@
             <img class="icon" src="./assets/imagens/icon-twitter.png" >
           </strong>
         </div>
-        <div>
+        <div routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.gastronomia[3].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
           <h3>{{ registros?.gastronomia[3].nome }}</h3>
           <img class="banner" [src]="registros?.gastronomia[3].capa" >
           <p>
@@ -234,7 +234,7 @@
             <img class="icon" src="./assets/imagens/icon-twitter.png" >
           </strong>
         </div>
-        <div>
+        <div routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.gastronomia[4].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
           <h3>{{ registros?.gastronomia[4].nome }}</h3>
           <img class="banner" [src]="registros?.gastronomia[4].capa" >
           <p>
@@ -247,7 +247,7 @@
             <img class="icon" src="./assets/imagens/icon-twitter.png" >
           </strong>
         </div>
-        <div>
+        <div routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.gastronomia[5].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
           <h3>{{ registros?.gastronomia[5].nome }}</h3>
           <img class="banner" [src]="registros?.gastronomia[5].capa" >
           <p>
@@ -364,14 +364,14 @@
         </div>
       </header>
       <section class="slide-turisticos">
-        <div>
+        <div routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.turisticos[0].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
           <div>
             <img class="banner" [src]="( registros?.turisticos[0].capa || '' )" >
           </div>
           <h3>{{ registros?.turisticos[0].nome }}</h3>
           <p>{{ registros?.turisticos[0].endereco }}</p>
         </div>
-        <div>
+        <div routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.turisticos[1].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
           <div>
             <img class="banner" [src]="( registros?.turisticos[1].capa || '' )" >
           </div>
@@ -389,14 +389,14 @@
         </div>
       </header>
       <section class="slide-cursos">
-        <div>
+        <div routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.cursos[0].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
           <div>
             <img class="banner" [src]="( registros?.cursos[0].capa || '' )" >
           </div>
           <h3>{{ registros?.cursos[0].nome }}</h3>
           <p>{{ registros?.cursos[0].endereco }}</p>
         </div>
-        <div>
+        <div routerLink="/guia-comercial" [queryParams]="{ pagina : 1, segmento : registros?.cursos[1].segmento_id, cidade : 'cidade', categoria : 'categoria' }">
           <div>
             <img class="banner" [src]="( registros?.cursos[1].capa || '' )" >
           </div>

@@ -17,6 +17,12 @@ export class DetalhesComponent implements OnInit {
   empresa;
   empresa_id;
   galeria;
+  contato = {
+    nome : null,
+    email : null,
+    telefone : null,
+    mensagem : null,
+  };
   constructor(private sanitizer:DomSanitizer, private route: ActivatedRoute, private progresso: NgProgressService, private http: HttpService) {
     this.progresso.start();
     this.route.params.subscribe(params => {
@@ -32,6 +38,18 @@ export class DetalhesComponent implements OnInit {
       });
    });
 
+  }
+
+  mensagem(contato){
+    this.progresso.start();
+    contato.send = this.empresa.contato.filter((e) => e.nome === 'email')[0].url;
+    this.http.ApiPost('mensagem', contato).subscribe((response:any) => {
+      alert('Mensagem enviada com sucesso.');
+      this.progresso.done();
+    }, (err:any) => {
+      this.progresso.done();
+      alert(JSON.stringify(err));
+    })
   }
 
   ngOnInit(){

@@ -1,6 +1,6 @@
 <section class="topo">
   <div>
-      <p>Araguiana - TO, Terça-feira<span>, 22 de janeiro de 2018</span></p>
+      <p>Araguiana - TO, {{ horario }}</p>
       <ul>
           <li>
               <a>Guia Médico
@@ -18,7 +18,9 @@
   </div>
 </section>
 <section class="banner">
-  <img class="logo" src="./assets/imagens/logo.jpg" >
+  <a class="logo" href="http://portaldoguia.com.br">
+    <img src="./assets/imagens/logo.jpg" >
+  </a>
   <div class="slide_600x100"><app-banner-slide [imagens]="imagens?._600x100"></app-banner-slide></div>
   <div class="slide_300x100"><app-banner-slide [imagens]="imagens?._300x100"></app-banner-slide></div>
   <img src="./assets/imagens/icon/menu.png" class="menu" />

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router } from '@angular/router';
+import * as moment from 'moment';
 declare var $ :any;
 
 @Component({
@@ -14,6 +15,7 @@ export class HeaderComponent implements OnInit {
   cidade:any;
   segmento:any;
   registros;
+  horario = moment().format("dddd, Do MMMM YYYY");
   constructor(
     private http: HttpService,
     private router: Router

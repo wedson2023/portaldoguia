@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterContentInit } from '@angular/core';
 import { NgProgressService } from 'ng2-progressbar';
 import { HttpService } from '../http.service';
-
+declare var $: any;
 @Component({
   selector: 'app-anuncie',
   templateUrl: './anuncie.component.html',
@@ -79,6 +79,10 @@ export class AnuncieComponent implements OnInit, AfterContentInit {
     this.http.ApiGet('categorias/listar-todos').subscribe((response:any) => {
       this.categorias = response.registros.data;
     });
+
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1);
   }
 
   ngAfterContentInit(){

@@ -1,24 +1,24 @@
 @import '../../assets/sass/reset'
 section.topo
     background: $yellow
-    div        
+    div
         width: $largura_content
         margin: auto
         display: flex
-        justify-content: space-between    
+        justify-content: space-between
         font-weight: 400
         align-items: center
         ul
             margin: 0
         li
             display: inline
-            a                
+            a
                 font-size: 0.7em
                 text-decoration: none
-                color: #000000 
+                color: #000000
                 padding: 5px 15px
                 &:hover
-                    text-decoration: underline 
+                    text-decoration: underline
                 div
                     z-index: 1
                     position: absolute
@@ -30,11 +30,11 @@ section.topo
                         display: flex
                         flex-direction: column
                         font-size: 1em !important
-                        
+
             img
                 width: 18px
-                margin-right: 5px   
-                            
+                margin-right: 5px
+
         p
             font-size: 0.7em
             margin: 5px 0
@@ -43,10 +43,12 @@ section.banner
     width: $largura_content
     margin: 25px auto
     display: flex
-    justify-content: space-between 
-    align-items: center 
-    img.logo
-        width: 13.18%
+    justify-content: space-between
+    align-items: center
+    a.logo
+      width: 13.18%
+      img
+        width: 100%
     div.slide_600x100
         width: 54.54%
     div.slide_300x100
@@ -63,9 +65,9 @@ nav.menu
         margin: auto
         display: flex
         justify-content: space-around
-        a 
-            flex-grow: 1   
-            font-size: 0.9em        
+        a
+            flex-grow: 1
+            font-size: 0.9em
             padding: 10px
             text-decoration: none
             color: #ffffff
@@ -81,14 +83,14 @@ nav.menu
                 margin-top: 10px
                 display: none
                 background: $red
-                margin-left: -0.7%                
+                margin-left: -0.7%
                 a
                     display: flex
                     flex-direction: column
                     text-align: left !important
 
 section.buscar
-    background: $azul    
+    background: $azul
     padding: 0 15%
     margin: 10px 0
     div
@@ -106,7 +108,7 @@ section.buscar
             display: flex
             justify-content: space-between
             align-items: center
-        label.form-servico            
+        label.form-servico
             width: 60%
             margin-right: 50px
             display: flex
@@ -118,7 +120,7 @@ section.buscar
                 padding: 7px
                 font-size: 0.9em
                 margin-left: 10px
-                border-radius: 0.3em 
+                border-radius: 0.3em
         label.form-cidade
             width: 40%
             input
@@ -141,13 +143,13 @@ section.buscar
                 &:hover
                     background: #ffd900
 
-@media screen and (max-width:1200px)	
+@media screen and (max-width:1200px)
     nav.menu
         div
-            a   
-                font-size: 0.8em        
+            a
+                font-size: 0.8em
                 padding: 10px 8px
-                div            
+                div
                     a
                         font-size: 1em
     section.buscar
@@ -157,8 +159,8 @@ section.buscar
 @media screen and (max-width:1110px)
     nav.menu
         div
-            a   
-                font-size: 0.75em 
+            a
+                font-size: 0.75em
     section.topo
         p
             span
@@ -166,7 +168,7 @@ section.buscar
 
 @media screen and (max-width:1024px)
     section.topo
-        div 
+        div
             display: none
     section.banner
         width: 100%
@@ -196,17 +198,17 @@ section.buscar
             display: block
         img.logo
             width: 40%
-            margin: 10px auto  
+            margin: 10px auto
             display: block
         div
             margin: 0
             flex-direction: column
-            width: 100%  
+            width: 100%
             a.conta
                 border-top: solid thin #ffffff
                 margin-bottom: 10px
-            a  
-                font-size: 0.75em        
+            a
+                font-size: 0.75em
                 padding: 10px
                 text-align: left
                 border-bottom: solid thin #ffffff
@@ -222,10 +224,10 @@ section.buscar
                 div
                     position: sticky
                     background: $red
-                    margin-left: -10px                    
+                    margin-left: -10px
                     a
                         border: none
-    section.buscar  
+    section.buscar
         padding: 0
         margin: 10px 0
         div
@@ -238,7 +240,7 @@ section.buscar
                 display: flex
                 justify-content: space-between
                 align-items: center
-            label.form-servico            
+            label.form-servico
                 width: 100%
                 margin-right: 0
                 justify-content: center

@@ -1,5 +1,7 @@
 import { HttpService } from './http.service';
 import { Component, OnInit } from '@angular/core';
+import * as moment from 'moment';
+import 'moment/locale/pt-br';
 
 @Component({
   selector: 'app-root',
@@ -19,8 +21,10 @@ export class AppComponent {
   public banner300x250_02;
   public banner300x250_03;
   public banner300x250_04;
-  
+
   constructor(private http: HttpService){
+    moment.locale('pt-BR');
+
     this.http.ApiGet('banner').subscribe((response:any) => {
       this.slide = {
         '_300x100' : response.resposta['300x100'],
@@ -28,7 +32,7 @@ export class AppComponent {
       };
 
       this.slide300x350 = response.resposta['300x350'];
-      
+
       this.banner300x350_01 = response.resposta['300x350'][0].imagem;
       this.banner300x350_02 = response.resposta['300x350'][1].imagem;
       this.banner300x350_03 = response.resposta['300x350'][2].imagem;

@@ -27,13 +27,13 @@
         <a target="_blank" *ngFor="let contato of empresa?.contato" [href]="contato.url">{{ ( contato.url || '' ) }}</a>
       </li>
     </ul>
-    <form action="">
+    <form (ngSubmit)="mensagem(contato)">
       <strong>Enviar uma mensagem para</strong>
       <h3>Maranata Espetados</h3>
-      <input class="campos" type="text" placeholder="Nome*">
-      <input class="campos" type="email" placeholder="E-mail*">
-      <input class="campos" type="tel" placeholder="Telefone*">
-      <textarea cols="30" rows="10" placeholder="Escreva sua mensagem aqui"></textarea>
+      <input [(ngModel)]="contato.nome" name="nome" class="campos" type="text" placeholder="Nome*">
+      <input [(ngModel)]="contato.email" name="email" class="campos" type="email" placeholder="E-mail*">
+      <input [(ngModel)]="contato.telefone" name="telefone" class="campos" type="tel" placeholder="Telefone*">
+      <textarea [(ngModel)]="contato.mensagem" name="mensagem" cols="30" rows="10" placeholder="Escreva sua mensagem aqui"></textarea>
       <input type="submit" value="ENVIAR MENSAGEM">
     </form>
   </div>
