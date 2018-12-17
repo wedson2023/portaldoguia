@@ -1,4 +1,27 @@
 @import '../../assets/sass/reset'
+
+.cartaz
+  position: fixed
+  width: 50%
+  padding: 15px
+  background: #ffffff
+  top: 10%
+  left: 50%
+  margin-left: -25%
+  z-index: 100
+  border: solid 5px #000000
+  span
+    right: 15px
+    position: absolute
+    padding: 5px 10px
+    background: red
+    color: #ffffff
+    text-align: center
+    margin-top: -35px
+    margin-right: -35px
+    opacity: 1
+  img
+    width: 100%
 section.noticias-agenda
     width: $largura_content
     margin: 10px auto
@@ -161,6 +184,9 @@ div.direitos
     text-align: right
 
 @media screen and (max-width:1024px)
+    .cartaz
+      width: 90%
+      margin-left: -45%
     section.noticias-agenda
         width: 100%
         flex-direction: column
@@ -181,9 +207,11 @@ div.direitos
         section
             flex-direction: column
             width: 100%
-            img
-                width: 40%
-                margin-bottom: 0
+            a.logo
+              width: 60%
+              img
+                  width: 100%
+                  margin-bottom: 0
             div.link
                 width: 80%
                 margin: 25px 0

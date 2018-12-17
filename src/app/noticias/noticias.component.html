@@ -1,3 +1,22 @@
+<div class="noticia">
+  <div [routerLink]="'/noticias/' + noticia.url" *ngFor="let noticia of noticias">
+    <img [src]="noticia.capa" />
+    <ul>
+      <li>
+        <strong>{{ noticia.fonte }}</strong>
+      </li>
+      <li>
+        <h3>{{ ( noticia.titulo || '' ) }}</h3>
+      </li>
+      <li>
+        <h4>{{ ( noticia.subtitulo || '' ) }}</h4>
+      </li>
+      <li>
+       <small>{{ ( noticia.created_at ? 'Postado em' + ( noticia.created_at.date | date : 'dd/MM/yyyy H:mm' ) : null ) }}</small>
+      </li>
+    </ul>
+  </div>
+</div>
 <section>
   <header>Nóticias <strong>Relacionadas</strong></header>
   <div>
@@ -20,7 +39,7 @@
       <img src="./assets/imagens/noticia/agua-chuva.jpg" >
       <span>LIMINAR</span>
       <p>Gilmar Mendes determina retorno de Marcelo Miranda ao cargo de governador do Tocantins.</p>
-    </article>    
-  </div> 
+    </article>
+  </div>
   <a href>Mais notícias</a>
 </section>

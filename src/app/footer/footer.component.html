@@ -1,3 +1,7 @@
+<div *ngIf="cartaz" class="cartaz">
+  <span (click)="closeCartaz()" class="close">x</span>
+  <img [src]="cartaz" />
+</div>
 <section class="noticias-agenda">
   <div class="noticias">
       <header><h3>Últimas notícias</h3></header>
@@ -29,7 +33,7 @@
               <span>{{ evento.hora + ' - ' + evento.local }}</span>
               <div class="link">
                   <a href="javascript:void(0)">Informações</a> |
-                  <a href="javascript:void(0)">Ver Cartaz</a> |
+                  <a (click)="verCartaz(evento.cartaz)" href="javascript:void(0)">Ver Cartaz</a> |
                   <a target="_blank" [routerLink]="evento.site" href="javascript:void(0)">Site do Evento</a>
               </div>
           </div>

@@ -1,16 +1,41 @@
 @import '../../assets/sass/reset'
+div.noticia
+  margin-bottom: 15px
+  div
+    border-bottom: solid thin #f1f1f1
+    display: flex
+    justify-content: space-between
+    padding: 10px
+    cursor: pointer
+    &:hover
+      background: #f1f1f1
+    h3
+      margin-bottom: 10px
+      color: #000000
+      font-size: 1.4em
+    h4
+      font-size: 1.2em
+      color: #666666
+    strong
+      color: green
+    ul
+      width: 70%
+    img
+      width: 30%
+      height: 150px
+      margin-right: 10px
 section
     display: flex
     flex-direction: column
-    header 
-        background: $gray 
+    header
+        background: $gray
         padding: 5px
         margin-bottom: 10px
     div
         display: flex
         justify-content: space-between
         padding-bottom: 10px
-        border-bottom: solid thin $gray  
+        border-bottom: solid thin $gray
         article
             width: 23%
             cursor: pointer
@@ -24,7 +49,7 @@ section
             p
                 font-size: 0.8em
                 color: #666666
-                line-height: 15px            
+                line-height: 15px
     a
         font-weight: bold
         text-decoration: underline
@@ -33,4 +58,18 @@ section
         justify-content: flex-end
         font-size: 0.9em
         padding: 5px
+
+@media screen and (max-width:1024px)
+  h3
+    font-size: 1em !important
+  h4
+    font-size: 0.9em !important
+  small
+    font-size: 0.8em
+  img
+    width: 30%
+    height: 150px
+    margin-right: 10px
+  section
+    padding: 10px
 

@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   cidade:any;
   segmento:any;
   registros;
-  horario = moment().format("dddd, Do MMMM YYYY");
+  horario = moment().format("dddd, D MMMM YYYY");
   constructor(
     private http: HttpService,
     private router: Router

@@ -13,6 +13,7 @@ export class FooterComponent implements OnInit {
 
   public g1;
   public eventos;
+  public cartaz;
   constructor(
     private http: HttpService,
     private router: Router
@@ -37,6 +38,14 @@ export class FooterComponent implements OnInit {
         }
       }
     });
+  }
+
+  verCartaz(cartaz){
+    this.cartaz = cartaz;
+  }
+
+  closeCartaz(){
+    this.cartaz = null;
   }
 
   ngOnInit() {

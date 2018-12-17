@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { NgProgressModule } from 'ng2-progressbar';
 import { HttpService } from './http.service';
 import { FormsModule } from '@angular/forms';
+import { APP_BASE_HREF, LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -48,7 +49,13 @@ import { HomeResolverService } from './home/home.resolver.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ HttpService, NoticiaResolverService, HomeResolverService ],
+  providers: [
+    HttpService,
+    NoticiaResolverService,
+    HomeResolverService,
+    { provide : APP_BASE_HREF, useValue : '/' },
+    { provide : LocationStrategy, useClass: HashLocationStrategy }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
